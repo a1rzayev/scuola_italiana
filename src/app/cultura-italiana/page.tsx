@@ -20,7 +20,7 @@ export default function CulturaItalianaPage() {
             We regularly organize events and workshops: film screenings, cooking sessions, talks on art and history, and celebrations of Italian holidays and traditions. These activities are open to students and the wider community.
           </p>
           <p>
-            Join us to explore la dolce vita—the sweet life—through language, food, and culture. Check our <a href="/contacts" className="text-indigo-600 dark:text-indigo-400 hover:underline">Contacts</a> page for upcoming events and how to get involved.
+            Join us to explore la dolce vita—the sweet life—through language, food, and culture. Check our <a href="/contacts" className="text-italia-600 dark:text-italia-400 hover:underline">Contacts</a> page for upcoming events and how to get involved.
           </p>
         </div>
       </section>

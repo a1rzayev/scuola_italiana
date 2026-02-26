@@ -24,7 +24,7 @@ export const Navbar = () => {
   return (
     <div className="w-full">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
-        <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-indigo-600 dark:text-gray-100">
+        <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-italia-600 dark:text-gray-100">
           <span>
             <Image
               src="/img/logo.svg"
@@ -47,7 +47,7 @@ export const Navbar = () => {
             <>
               <Disclosure.Button
                 aria-label="Toggle Menu"
-                className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-italia-500 focus:text-italia-500 focus:bg-italia-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
               >
                 <svg
                   className="w-6 h-6 fill-current"
@@ -82,7 +82,7 @@ export const Navbar = () => {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block w-full px-6 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 hover:bg-indigo-50 dark:hover:bg-trueGray-700"
+                            className="block w-full px-6 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-italia-500 hover:bg-italia-50 dark:hover:bg-trueGray-700"
                           >
                             {child.name}
                           </Link>
@@ -92,7 +92,7 @@ export const Navbar = () => {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                        className="block w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-italia-500 focus:text-italia-500 focus:bg-italia-100 dark:focus:bg-gray-800 focus:outline-none"
                       >
                         {item.name}
                       </Link>
@@ -110,7 +110,7 @@ export const Navbar = () => {
               "children" in item ? (
                 <li className="nav__item relative group" key={item.name}>
                   <Menu as="div" className="relative">
-                    <Menu.Button className="inline-flex items-center px-4 py-2 text-lg font-normal text-gray-800 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                    <Menu.Button className="inline-flex items-center px-4 py-2 text-lg font-normal text-gray-800 rounded-md dark:text-gray-200 hover:text-italia-500 focus:text-italia-500 focus:bg-italia-100 focus:outline-none dark:focus:bg-gray-800">
                       {item.name}
                       <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -122,7 +122,7 @@ export const Navbar = () => {
                           {({ active }) => (
                             <Link
                               href={child.href}
-                              className={`block px-4 py-2 text-sm ${active ? "bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400" : "text-gray-700 dark:text-gray-200"}`}
+                              className={`block px-4 py-2 text-sm ${active ? "bg-italia-50 dark:bg-italia-900/30 text-italia-600 dark:text-italia-400" : "text-gray-700 dark:text-gray-200"}`}
                             >
                               {child.name}
                             </Link>
@@ -136,7 +136,7 @@ export const Navbar = () => {
                 <li className="nav__item" key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                    className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-italia-500 focus:text-italia-500 focus:bg-italia-100 focus:outline-none dark:focus:bg-gray-800"
                   >
                     {item.name}
                   </Link>

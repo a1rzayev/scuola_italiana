@@ -20,12 +20,12 @@ export const Hero = () => {
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <Link
                 href="/services/course"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600">
+                className="px-8 py-4 text-lg font-medium text-center text-white bg-italia-600 rounded-md hover:bg-italia-700 dark:bg-italia-500 dark:hover:bg-italia-600">
                 View Courses
               </Link>
               <Link
                 href="/contacts"
-                className="flex items-center space-x-2 text-gray-500 dark:text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400">
+                className="flex items-center space-x-2 text-gray-500 dark:text-gray-400 hover:text-italia-500 dark:hover:text-italia-400">
                 <span>Contact Us</span>
               </Link>
             </div>
@@ -48,7 +48,7 @@ export const Hero = () => {
       <Container>
         <div className="flex flex-col justify-center">
           <div className="text-xl text-center text-gray-700 dark:text-white">
-            Courses • Café • <span className="text-indigo-600">Lingua</span> &amp; <span className="text-indigo-600">Cultura</span>
+            Courses • Café • <span className="text-italia-600">Lingua</span> &amp; <span className="text-italia-600">Cultura</span>
           </div>
         </div>
       </Container>

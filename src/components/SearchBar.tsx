@@ -76,7 +76,7 @@ export function SearchBar() {
             setIsOpen(true);
           }}
           onFocus={() => query && setIsOpen(true)}
-          className="w-40 pl-9 pr-3 py-2 text-sm border border-gray-200 rounded-lg bg-gray-50 dark:bg-trueGray-800 dark:border-trueGray-600 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent sm:w-48"
+          className="w-40 pl-9 pr-3 py-2 text-sm border border-gray-200 rounded-lg bg-gray-50 dark:bg-trueGray-800 dark:border-trueGray-600 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-italia-500 focus:border-transparent sm:w-48"
           aria-label="Search within site"
         />
       </div>
@@ -93,8 +93,8 @@ export function SearchBar() {
                   setIsOpen(false);
                   setQuery("");
                 }}
-                className={`block px-4 py-2 text-left hover:bg-indigo-50 dark:hover:bg-indigo-900/30 ${
-                  index === focusedIndex ? "bg-indigo-50 dark:bg-indigo-900/30" : ""
+                className={`block px-4 py-2 text-left hover:bg-italia-50 dark:hover:bg-italia-900/30 ${
+                  index === focusedIndex ? "bg-italia-50 dark:bg-italia-900/30" : ""
                 }`}
               >
                 <span className="font-medium text-gray-900 dark:text-white">{item.title}</span>

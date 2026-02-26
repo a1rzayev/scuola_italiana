@@ -9,5 +9,9 @@
   body {
     @apply dark:bg-trueGray-900;
   }
+  /* Italian theme: green focus for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-italia-500 ring-offset-2 dark:ring-offset-trueGray-900;
+  }
 }
 

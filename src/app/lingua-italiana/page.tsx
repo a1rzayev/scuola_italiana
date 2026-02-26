@@ -20,7 +20,7 @@ export default function LinguaItalianaPage() {
             At Scuola Italiana we focus on all four skills—listening, speaking, reading, and writing—with special attention to pronunciation and real-life communication. Our materials include authentic texts, videos, and conversation practice so you can use the language in meaningful contexts.
           </p>
           <p>
-            Whether you plan to travel, work, or study in Italy, or simply love the language, we are here to help you reach your goals. Explore our <a href="/services/course" className="text-indigo-600 dark:text-indigo-400 hover:underline">courses</a> to get started.
+            Whether you plan to travel, work, or study in Italy, or simply love the language, we are here to help you reach your goals. Explore our <a href="/services/course" className="text-italia-600 dark:text-italia-400 hover:underline">courses</a> to get started.
           </p>
         </div>
       </section>

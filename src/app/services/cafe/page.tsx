@@ -20,7 +20,7 @@ export default function CafePage() {
             We host conversation tables and cultural events so you can meet other students and native speakers. Whether you&apos;re a beginner or advanced learner, you&apos;re always welcome.
           </p>
           <p>
-            Opening hours and menu details are available on our <a href="/contacts" className="text-indigo-600 dark:text-indigo-400 hover:underline">Contacts</a> page. Vi aspettiamo!
+            Opening hours and menu details are available on our <a href="/contacts" className="text-italia-600 dark:text-italia-400 hover:underline">Contacts</a> page. Vi aspettiamo!
           </p>
         </div>
       </section>
