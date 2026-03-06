@@ -27,9 +27,9 @@ export const Navbar = () => {
         <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-italia-600 dark:text-gray-100">
           <span>
             <Image
-              src="/img/logo.svg"
+              src="/img/logo.png"
               width="32"
-              alt="S"
+              alt="Scuola Italiana logo"
               height="32"
               className="w-8"
             />

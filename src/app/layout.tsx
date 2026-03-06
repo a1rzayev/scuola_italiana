@@ -13,6 +13,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Scuola Italiana — Italian Courses, Café & Culture",
   description: "Learn Italian with Scuola Italiana. Courses for all levels, Italian café, and cultural events. Lingua e cultura italiana.",
+  icons: {
+    icon: "/img/logo.png",
+    shortcut: "/img/logo.png",
+    apple: "/img/logo.png",
+  },
 };
 
 export default function RootLayout({

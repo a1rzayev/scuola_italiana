@@ -35,6 +35,39 @@ export default function ContactsPage() {
               Closed on Sundays and public holidays.
             </p>
           </div>
+          <div className="p-6 rounded-lg bg-gray-50 dark:bg-trueGray-800">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Social</h3>
+            <p className="mt-1 text-gray-600 dark:text-gray-300">
+              Follow us on{" "}
+              <a
+                href="https://instagram.com/your-instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-italia-600 dark:text-italia-400 hover:underline"
+              >
+                Instagram
+              </a>
+              ,{" "}
+              <a
+                href="https://t.me/your-telegram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-italia-600 dark:text-italia-400 hover:underline"
+              >
+                Telegram
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://wa.me/your-whatsapp-number"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-italia-600 dark:text-italia-400 hover:underline"
+              >
+                WhatsApp
+              </a>
+              .
+            </p>
+          </div>
         </div>
       </section>
     </Container>
