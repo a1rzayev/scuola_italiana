@@ -1,9 +1,14 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function Footer() {
+  const { t } = useLanguage();
+  const year = new Date().getFullYear();
+
   return (
     <div className="relative">
       <Container>
@@ -26,12 +31,12 @@ export function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Italian language courses for all levels, an authentic Italian café, and cultural events in Baku, Azerbaijan.
+              {t.footer.description}
             </div>
           </div>
 
           <div className="">
-            <div>Follow us</div>
+            <div>{t.footer.followUs}</div>
             <div className="mt-5 space-y-2 text-gray-600 dark:text-gray-400 text-sm">
               <a
                 href="https://t.me/your-telegram"
@@ -54,7 +59,7 @@ export function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()} Scuola Italiana Baku.
+          {t.footer.copyright.replace("{year}", String(year))}
         </div>
       </Container>
       {/* Do not remove this */}

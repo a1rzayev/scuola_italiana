@@ -4,27 +4,27 @@ import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure, Menu } from "@headlessui/react";
 import { SearchBar } from "./SearchBar";
-import { useState } from "react";
+import { useLanguage, Language } from "@/context/LanguageContext";
 
-const mainNav = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about-us" },
-  {
-    name: "Services",
-    children: [
-      { name: "Café", href: "/services/cafe" },
-      { name: "Course", href: "/services/course" },
-    ],
-  },
-  { name: "Lingua Italiana", href: "/lingua-italiana" },
-  { name: "Cultura Italiana", href: "/cultura-italiana" },
-  { name: "Contacts", href: "/contacts" },
-];
-
-const languages = ["AZ", "EN", "IT"];
+const languages: Language[] = ["AZ", "EN", "IT"];
 
 export const Navbar = () => {
-  const [lang, setLang] = useState("EN");
+  const { lang, setLang, t } = useLanguage();
+
+  const mainNav = [
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.aboutUs, href: "/about-us" },
+    {
+      name: t.nav.services,
+      children: [
+        { name: t.nav.cafe, href: "/services/cafe" },
+        { name: t.nav.course, href: "/services/course" },
+      ],
+    },
+    { name: t.nav.linguaItaliana, href: "/lingua-italiana" },
+    { name: t.nav.culturaItaliana, href: "/cultura-italiana" },
+    { name: t.nav.contacts, href: "/contacts" },
+  ];
 
   return (
     <div className="w-full">
@@ -73,8 +73,8 @@ export const Navbar = () => {
               </button>
             ))}
           </div>
-          <SearchBar />
           <ThemeChanger />
+          <SearchBar />
         </div>
 
         <Disclosure>

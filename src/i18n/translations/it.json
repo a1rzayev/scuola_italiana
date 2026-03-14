@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "home": "Home",
+    "aboutUs": "Chi siamo",
+    "services": "Servizi",
+    "cafe": "Caffè",
+    "course": "Corsi",
+    "linguaItaliana": "Lingua Italiana",
+    "culturaItaliana": "Cultura Italiana",
+    "contacts": "Contatti"
+  },
+  "hero": {
+    "title": "Impara l'italiano a Baku",
+    "description": "Scuola Italiana Baku offre corsi di lingua italiana per tutti i livelli, un autentico caffè italiano ed eventi culturali. Scopri la lingua e la cultura d'Italia qui in Azerbaigian.",
+    "viewCourses": "Vedi i corsi",
+    "contactUs": "Contattaci",
+    "tagline": "Corsi • Caffè • Lingua & Cultura Italiana a Baku"
+  },
+  "home": {
+    "preTitle": "Scuola Italiana Baku",
+    "sectionTitle": "Corsi di italiano, cultura e caffè a Baku",
+    "sectionDesc": "Impara l'italiano con insegnanti madrelingua qualificati, pratica nel nostro autentico caffè italiano e immergiti nella cultura italiana — nel cuore di Baku.",
+    "whatWeOffer": "Cosa offriamo",
+    "coursesServices": "Corsi & Servizi",
+    "coursesServicesDesc": "Scegli tra lezioni di italiano in gruppo o private e goditi il nostro autentico caffè italiano, qui a Baku.",
+    "italianCourses": "Corsi di Italiano",
+    "italianCoursesDesc": "Dal principiante all'avanzato — da A1 a C2. Lezioni in gruppo e private con insegnanti madrelingua italiani.",
+    "viewCourses": "Vedi i corsi →",
+    "ourCafe": "Il Nostro Caffè",
+    "ourCafeDesc": "Autentico espresso, cappuccino, pastries italiane e un ambiente accogliente per praticare l'italiano.",
+    "visitCafe": "Visita il caffè →",
+    "explore": "Esplora",
+    "linguaCultura": "Lingua & Cultura",
+    "linguaCulturaDesc": "Scopri la lingua e la cultura italiana — grammatica, vocabolario, arte, storia e tradizioni.",
+    "linguaItaliana": "Lingua Italiana",
+    "culturaItaliana": "Cultura Italiana"
+  },
+  "about": {
+    "preTitle": "Chi siamo",
+    "title": "Scuola Italiana Baku",
+    "subtitle": "Siamo la scuola di lingua italiana e il centro culturale di Baku, dedicati a portare un'autentica educazione e cultura italiana in Azerbaigian.",
+    "p1": "Scuola Italiana Baku è nata per portare un'autentica educazione della lingua italiana e la cultura a Baku, Azerbaigian. I nostri insegnanti sono madrelingua o quasi-madrelingua italiani con esperienza professionale nell'insegnamento dell'italiano come lingua straniera.",
+    "p2": "Offriamo corsi in gruppo e privati per tutti i livelli — dai principianti assoluti (A1) agli avanzati (C2) — nonché un accogliente caffè italiano dove puoi praticare il tuo italiano in un ambiente rilassato gustando autentici caffè italiani e pasticcini.",
+    "p3": "La nostra missione è rendere l'apprendimento dell'italiano piacevole ed efficace, condividendo allo stesso tempo la ricchezza della cultura italiana — dall'arte, alla musica, al cinema, al cibo e alle tradizioni — con la comunità di Baku.",
+    "p4": "Che tu voglia studiare o lavorare in Italia, prepararti agli esami CILS/CELI o semplicemente innamorarti della lingua, Scuola Italiana Baku è la tua casa per tutto ciò che è italiano in Azerbaigian."
+  },
+  "contacts": {
+    "preTitle": "Contatti",
+    "title": "Contatti",
+    "subtitle": "Mettiti in contatto — ci farebbe piacere sentirti.",
+    "address": "Indirizzo",
+    "addressLine": "Baku, Azerbaigian",
+    "phoneEmail": "Telefono & Email",
+    "openingHours": "Orari di apertura",
+    "openingHoursDetail": "Scuola & Caffè: Lun–Ven 9:00–19:00, Sab 10:00–14:00",
+    "closedSundays": "Chiuso la domenica e nei giorni festivi.",
+    "social": "Social"
+  },
+  "cultura": {
+    "preTitle": "La cultura",
+    "title": "Cultura Italiana",
+    "subtitle": "Arte, storia, tradizioni — scopri la cultura italiana a Baku.",
+    "p1": "La cultura italiana ha plasmato l'arte, la musica, la cucina, la moda e il design occidentale per secoli. Dal Rinascimento al cinema e al cibo contemporaneo, l'Italia continua a ispirare il mondo. A Scuola Italiana Baku crediamo che comprendere la cultura approfondisca la tua padronanza della lingua e renda l'apprendimento più gratificante.",
+    "p2": "Organizziamo regolarmente eventi culturali e workshop a Baku: proiezioni di film italiani, sessioni di cucina, conferenze su arte e storia, e celebrazioni di feste e tradizioni italiane. Queste attività sono aperte ai nostri studenti e alla più ampia comunità di Baku.",
+    "p3": "Unisciti a noi per esplorare la dolce vita — attraverso lingua, cibo e cultura. Consulta la nostra pagina Contatti o seguici su Instagram per i prossimi eventi."
+  },
+  "lingua": {
+    "preTitle": "La lingua",
+    "title": "Lingua Italiana",
+    "subtitle": "La lingua italiana — storia, bellezza e perché impararla a Baku.",
+    "p1": "L'italiano è una lingua romanza parlata da oltre 85 milioni di persone nel mondo. Discende dal latino ed è nota per la sua musicalità, i chiari suoni vocalici e la bellezza espressiva. Imparare l'italiano apre le porte a una delle tradizioni letterarie, artistiche e culinarie più ricche del mondo.",
+    "p2": "A Scuola Italiana Baku ci concentriamo su tutte e quattro le competenze — ascolto, parlato, lettura e scrittura — con particolare attenzione alla pronuncia e alla comunicazione nella vita reale. I nostri materiali includono testi autentici italiani, video, musica e pratica conversazionale per usare la lingua in contesti significativi fin dalla prima lezione.",
+    "p3": "Che tu abbia in programma di viaggiare, lavorare o studiare in Italia, o semplicemente ami la lingua, siamo qui per aiutarti a raggiungere i tuoi obiettivi proprio qui a Baku. Esplora i nostri corsi per iniziare."
+  },
+  "services": {
+    "preTitle": "Servizi",
+    "title": "I Nostri Servizi",
+    "subtitle": "Scopri cosa offre Scuola Italiana Baku — corsi di lingua italiana e un autentico caffè italiano.",
+    "cafe": "Caffè",
+    "cafeDesc": "Il nostro caffè italiano a Baku offre autentico espresso, pasticcini e un ambiente accogliente per praticare l'italiano e incontrare altri studenti.",
+    "visitCafe": "Visita il caffè →",
+    "courses": "Corsi",
+    "coursesDesc": "Corsi di lingua italiana per ogni livello — dal principiante all'avanzato. Lezioni in gruppo e private con insegnanti madrelingua qualificati.",
+    "viewCourses": "Vedi i corsi →"
+  },
+  "cafe": {
+    "preTitle": "Caffè",
+    "title": "Il Nostro Caffè Italiano a Baku",
+    "subtitle": "Un assaggio d'Italia in ogni tazza — autentico espresso, pasticcini e conversazione.",
+    "p1": "Il nostro caffè è il cuore di Scuola Italiana Baku. Qui puoi gustare autentico caffè italiano — espresso, cappuccino, macchiato — e pasticcini italiani appena sfornati. È il posto perfetto per praticare il tuo italiano in un ambiente informale o semplicemente rilassarti tra una lezione e l'altra.",
+    "p2": "Ospitiamo tavoli di conversazione ed eventi culturali per incontrare altri studenti e parlanti madrelingua italiani qui a Baku. Che tu sia un principiante o uno studente avanzato, sei sempre il benvenuto.",
+    "p3": "Gli orari di apertura e i dettagli del menù sono disponibili sulla nostra pagina Contatti. Vi aspettiamo!"
+  },
+  "course": {
+    "preTitle": "Corsi",
+    "title": "Corsi di Lingua Italiana a Baku",
+    "subtitle": "Da A1 a C2 — corsi strutturati e opzioni flessibili per ogni obiettivo.",
+    "p1": "Scuola Italiana Baku offre corsi di lingua italiana allineati al Quadro Comune Europeo di Riferimento (CEFR). Puoi scegliere corsi in gruppo per un'esperienza di apprendimento sociale o lezioni private per un ritmo personalizzato. Tutti i nostri insegnanti sono madrelingua italiani qualificati che usano metodi comunicativi per far usare la lingua fin dal primo giorno.",
+    "p2": "I tipi di corsi includono: italiano generale (tutti i livelli A1–C2), pratica di conversazione, preparazione agli esami (CILS, CELI) e italiano commerciale. Gli orari sono pensati per adulti che lavorano e studenti.",
+    "p3": "Per ulteriori informazioni su livelli, orari e iscrizioni, visita la nostra pagina Contatti, scrivici su Instagram o passa a trovarci alla scuola."
+  },
+  "cta": {
+    "title": "Pronto a imparare l'italiano a Baku?",
+    "desc": "Iscriviti ai nostri corsi o visita il nostro caffè. Contattaci per maggiori informazioni.",
+    "button": "Contattaci"
+  },
+  "faq": {
+    "q1": "Quali livelli offrite?",
+    "a1": "Offriamo corsi dal principiante assoluto (A1) all'avanzato (C2), seguendo il Quadro Comune Europeo di Riferimento (CEFR).",
+    "q2": "Gli insegnanti sono madrelingua italiani?",
+    "a2": "Sì, i nostri insegnanti sono madrelingua o quasi-madrelingua italiani con qualifiche professionali ed esperienza nell'insegnamento dell'italiano come lingua straniera.",
+    "q3": "Posso prepararmi agli esami CILS o CELI?",
+    "a3": "Assolutamente. Offriamo corsi di preparazione dedicati per le certificazioni CILS e CELI, che sono esami di competenza italiana riconosciuti a livello internazionale.",
+    "q4": "Offrite lezioni private?",
+    "a4": "Sì, offriamo sia corsi in gruppo che lezioni private one-to-one. Le lezioni private possono essere programmate in modo flessibile in base alla tua disponibilità.",
+    "q5": "Come posso iscrivermi?",
+    "a5": "Puoi contattarci tramite Instagram, Telegram, WhatsApp o visitare la nostra pagina Contatti. Ti aiuteremo a trovare il corso giusto per il tuo livello e i tuoi obiettivi."
+  },
+  "footer": {
+    "description": "Corsi di lingua italiana per tutti i livelli, un autentico caffè italiano ed eventi culturali a Baku, Azerbaigian.",
+    "followUs": "Seguici",
+    "copyright": "© {year} Scuola Italiana Baku. Tutti i diritti riservati."
+  },
+  "benefits": {
+    "oneTitle": "Perché imparare l'italiano con noi?",
+    "oneDesc": "Scuola Italiana Baku unisce insegnanti madrelingua qualificati, un approccio comunicativo e un'accogliente atmosfera italiana per farti imparare efficacemente e godere di ogni lezione.",
+    "nativeTeachersTitle": "Insegnanti madrelingua italiani",
+    "nativeTeachersDesc": "Impara da parlanti nativi qualificati che portano la vera cultura italiana in ogni lezione.",
+    "allLevelsTitle": "Tutti i livelli A1–C2",
+    "allLevelsDesc": "Corsi strutturati allineati al CEFR, dal principiante assoluto all'avanzato.",
+    "examPrepTitle": "Preparazione esami CILS & CELI",
+    "examPrepDesc": "Preparati per le certificazioni di competenza italiana riconosciute a livello internazionale.",
+    "twoTitle": "Più di una semplice scuola",
+    "twoDesc": "Scuola Italiana Baku è una comunità — impara la lingua, goditi il nostro caffè e vivi la cultura italiana attraverso eventi e workshop a Baku.",
+    "cafeTitle": "Autentico caffè italiano",
+    "cafeDesc": "Pratica l'italiano davanti a un vero espresso, cappuccino e pasticcini appena sfornati.",
+    "eventsTitle": "Eventi culturali & workshop",
+    "eventsDesc": "Proiezioni di film, sessioni di cucina, conferenze sull'arte e celebrazioni di feste italiane.",
+    "lessonsTitle": "Lezioni in gruppo & private",
+    "lessonsDesc": "Formati flessibili per adattarsi al tuo programma — piccoli gruppi o one-to-one con un insegnante."
+  }
+}

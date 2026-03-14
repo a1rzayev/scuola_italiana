@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "home": "Ana Səhifə",
+    "aboutUs": "Haqqımızda",
+    "services": "Xidmətlər",
+    "cafe": "Kafe",
+    "course": "Kurslar",
+    "linguaItaliana": "İtalyan Dili",
+    "culturaItaliana": "İtalyan Mədəniyyəti",
+    "contacts": "Əlaqə"
+  },
+  "hero": {
+    "title": "Bakıda İtalyan Dilini Öyrən",
+    "description": "Scuola Italiana Baku bütün səviyyələr üçün İtalyan dili kursları, orijinal İtalyan kafesi və mədəni tədbirlər təklif edir. İtaliyanın dili və mədəniyyətini Azərbaycanda kəşf edin.",
+    "viewCourses": "Kurslara Bax",
+    "contactUs": "Bizimlə Əlaqə",
+    "tagline": "Kurslar • Kafe • İtalyan Dili & Mədəniyyəti Bakıda"
+  },
+  "home": {
+    "preTitle": "Scuola Italiana Baku",
+    "sectionTitle": "Bakıda İtalyan kursları, mədəniyyət və kafe",
+    "sectionDesc": "Peşəkar ana dilli müəllimlərlə İtalyan dilini öyrən, orijinal İtalyan kafemizə baş çək, Bakının mərkəzindən İtalyan mədəniyyətinə qərq ol.",
+    "whatWeOffer": "Nə təklif edirik",
+    "coursesServices": "Kurslar & Xidmətlər",
+    "coursesServicesDesc": "Qrup və ya fərdi İtalyan dərslərindən seçim et, Bakıdakı orijinal İtalyan kafemizdən zövq al.",
+    "italianCourses": "İtalyan Kursları",
+    "italianCoursesDesc": "Başlanğıcdan irəliyə — A1-dən C2-yə. Ana dilli müəllimlərlə qrup və fərdi dərslər.",
+    "viewCourses": "Kurslara bax →",
+    "ourCafe": "Kafemiz",
+    "ourCafeDesc": "Orijinal İtalyan espresso, kapuçino, pestri və İtalyanca praktika üçün rahat mühit.",
+    "visitCafe": "Kafeyə get →",
+    "explore": "Kəşf et",
+    "linguaCultura": "Dil & Mədəniyyət",
+    "linguaCulturaDesc": "İtalyan dili və mədəniyyətini kəşf et — qrammatika, lüğət, sənət, tarix və ənənələr.",
+    "linguaItaliana": "İtalyan Dili",
+    "culturaItaliana": "İtalyan Mədəniyyəti"
+  },
+  "about": {
+    "preTitle": "Haqqımızda",
+    "title": "Scuola Italiana Baku haqqında",
+    "subtitle": "Biz Bakının İtalyan dili məktəbi və mədəniyyət mərkəziyik — İtalyan təhsilini və mədəniyyətini Azərbaycana gətirməyə həsr olunmuşuq.",
+    "p1": "Scuola Italiana Baku orijinal İtalyan dili təhsili və mədəniyyətini Bakıya, Azərbaycana gətirmək üçün qurulub. Müəllimlərimiz İtalyan dilini xarici dil kimi öyrətmədə peşəkar təcrübəyə malik ana dilli və ya ana dilinə yaxın İtalyan danışanlarıdır.",
+    "p2": "Mütləq başlanğıc (A1) səviyyəsindən qabaqcıl (C2) səviyyəyə qədər bütün səviyyələr üçün qrup və fərdi kurslar, həmçinin rahat mühitdə İtalyanca məşq edə biləcəyiniz, orijinal İtalyan qəhvəsi və pestri ləzzətini dadacağınız bir kafe təklif edirik.",
+    "p3": "Missiyamız İtalyan dilini öyrənməyi əyləncəli və effektiv etmək, eyni zamanda İtalyan mədəniyyətinin zənginliyini — sənət, musiqi, kino, yeməkdən ənənələrə qədər — Bakı icması ilə bölüşməkdir.",
+    "p4": "İtaliyada oxumaq və ya işləmək istəyirsinizsə, CILS/CELI imtahanlarına hazırlaşırsınızsa, yaxud sadəcə bu dilə aşiq olduysunuzsa, Scuola Italiana Baku Azərbaycanda hər şeyin İtalyan olduğu evinizdir."
+  },
+  "contacts": {
+    "preTitle": "Əlaqə",
+    "title": "Bizimlə Əlaqə",
+    "subtitle": "Bizimlə əlaqə saxlayın — sizdən eşitmək istəyirik.",
+    "address": "Ünvan",
+    "addressLine": "Bakı, Azərbaycan",
+    "phoneEmail": "Telefon & E-poçt",
+    "openingHours": "İş saatları",
+    "openingHoursDetail": "Məktəb & Kafe: B.e.–Cümə 9:00–19:00, Şənbə 10:00–14:00",
+    "closedSundays": "Bazar günləri və dövlət bayramları bağlıdır.",
+    "social": "Sosial Şəbəkə"
+  },
+  "cultura": {
+    "preTitle": "Mədəniyyət",
+    "title": "İtalyan Mədəniyyəti",
+    "subtitle": "Sənət, tarix, ənənələr — Bakıda İtalyan mədəniyyətini kəşf edin.",
+    "p1": "İtalyan mədəniyyəti əsrlər boyu Qərb sənəti, musiqisi, mətbəxi, modası və dizaynını formalaşdırıb. Renessansdan müasir kinoya və yeməyə qədər İtaliya dünyanı ilhamlandırmağa davam edir. Scuola Italiana Bakuda inanırıq ki, mədəniyyəti anlamaq dilinizin dərinliyini artırır və öyrənməni daha mənalı edir.",
+    "p2": "Bakıda mütəmadi olaraq mədəni tədbirlər və seminarlar təşkil edirik: İtalyan filmlərinin nümayişi, kulinariya dərsləri, sənət və tarix haqqında söhbətlər, İtalyan bayramlarının qeyd edilməsi. Bu tədbirlər tələbələrimizə və Bakı icmasına açıqdır.",
+    "p3": "La dolce vita — şirin həyatı — dil, yemək və mədəniyyət vasitəsilə kəşf etmək üçün bizə qoşulun. Gələcək tədbirlər üçün Əlaqə səhifəmizə baxın və ya İnstagramda bizi izləyin."
+  },
+  "lingua": {
+    "preTitle": "Dil",
+    "title": "İtalyan Dili",
+    "subtitle": "İtalyan dili — tarixi, gözəlliyi və Bakıda niyə öyrənilməli.",
+    "p1": "İtalyan dili dünya üzrə 85 milyondan çox insan tərəfindən danışılan Roman dilidir. Latın dilindən törəyib və musiqiliyi, aydın sait səsləri və ifadə gözəlliyi ilə tanınır. İtalyan dilini öyrənmək dünyanın ən zəngin ədəbi, bədii və kulinariya ənənələrinə qapı açır.",
+    "p2": "Scuola Italiana Bakuda tələffüz və real ünsiyyətə xüsusi diqqət yetirərək dörd bacarığa — dinləmə, danışma, oxuma və yazmaya — fokuslanırıq. Materiallarımıza orijinal İtalyan mətnləri, videolar, musiqi və söhbət məşqləri daxildir ki, ilk dərsdən dilin mənalı kontekstlərini işlədəsiniz.",
+    "p3": "İtaliyaya səyahət, iş və ya təhsil planlaşdırırsınızsa, yaxud sadəcə dili sevirsinizsə, hədəflərinizə çatmaqda kömək etmək üçün buradayıq. Başlamaq üçün kurslarımıza nəzər salın."
+  },
+  "services": {
+    "preTitle": "Xidmətlər",
+    "title": "Xidmətlərimiz",
+    "subtitle": "Scuola Italiana Bakının təkliflərini kəşf edin — İtalyan dili kursları və orijinal İtalyan kafesi.",
+    "cafe": "Kafe",
+    "cafeDesc": "Bakıdakı İtalyan kafemiz orijinal espresso, pestri və İtalyanca məşq etmək, həmdərd tələbələrlə tanışmaq üçün rahat mühit təklif edir.",
+    "visitCafe": "Kafeyə get →",
+    "courses": "Kurslar",
+    "coursesDesc": "Hər səviyyə üçün İtalyan dili kursları — başlanğıcdan irəliyə. Peşəkar ana dilli müəllimlərlə qrup dərsləri və fərdi dərslər.",
+    "viewCourses": "Kurslara bax →"
+  },
+  "cafe": {
+    "preTitle": "Kafe",
+    "title": "Bakıdakı İtalyan Kafemiz",
+    "subtitle": "Hər fincan içindəki İtaliya dadı — orijinal espresso, pestri və söhbət.",
+    "p1": "Kafemiz Scuola Italiana Bakının ürəyidir. Burada orijinal İtalyan qəhvəsindən — espresso, kapuçino, makiato — və təzə bişmiş İtalyan pestrindən zövq alabilərsiniz. Dərslər arasında rahatlamaq və ya qeyri-rəsmi mühitdə İtalyanca məşq etmək üçün mükəmməl yerdir.",
+    "p2": "Bakıda digər tələbələr və ana dilli İtalyan danışanlarla görüşə biləcəyiniz söhbət masaları və mədəni tədbirlər keçiririk. Başlanğıc və ya qabaqcıl səviyyədə olsanız da, həmişə xoş gəlmisiniz.",
+    "p3": "İş saatları və menyu təfərrüatları Əlaqə səhifəmizdə mövcuddur. Vi aspettiamo!"
+  },
+  "course": {
+    "preTitle": "Kurslar",
+    "title": "Bakıda İtalyan Dili Kursları",
+    "subtitle": "A1-dən C2-yə — hər hədəf üçün strukturlu kurslar və çevik seçimlər.",
+    "p1": "Scuola Italiana Baku Avropa Çərçivəsi (CEFR) ilə uyğunlaşdırılmış İtalyan dili kursları təklif edir. Sosial öyrənmə təcrübəsi üçün qrup kursları, fərdiləşdirilmiş temp üçün isə fərdi dərslər seçə bilərsiniz. Bütün müəllimlərimiz ilk gündən dili işlətməyə başlayacağınız kommunikativ metodlar istifadə edən peşəkar ana dilli İtalyan danışanlarıdır.",
+    "p2": "Kurs növlərinə daxildir: ümumi İtalyan dili (bütün səviyyələr A1–C2), söhbət məşqi, imtahan hazırlığı (CILS, CELI) və biznes İtalyancası. Qrafiklər işlə məşğul yetkinlər və tələbələr üçün nəzərə alınıb.",
+    "p3": "Səviyyələr, qrafiklər və qeydiyyat haqqında ətraflı məlumat üçün Əlaqə səhifəmizə baş çəkin, İnstagramda bizə mesaj yazın və ya məktəbə gəlin."
+  },
+  "cta": {
+    "title": "Bakıda İtalyan dilini öyrənməyə hazırsınız?",
+    "desc": "Kurslarımıza qoşulun və ya kafemizə baş çəkin. Ətraflı məlumat üçün bizimlə əlaqə saxlayın.",
+    "button": "Bizimlə Əlaqə"
+  },
+  "faq": {
+    "q1": "Hansı səviyyələri təklif edirsiniz?",
+    "a1": "Avropa İstinad Çərçivəsinə (CEFR) əsasən mütləq başlanğıc (A1) səviyyəsindən qabaqcıl (C2) səviyyəyə qədər kurslar təklif edirik.",
+    "q2": "Müəllimlər ana dilli İtalyan danışanlarıdırmı?",
+    "a2": "Bəli, müəllimlərimiz İtalyan dilini xarici dil kimi öyrətmədə peşəkar ixtisas və təcrübəyə malik ana dilli və ya ana dilinə yaxın İtalyan danışanlarıdır.",
+    "q3": "CILS və ya CELI imtahanlarına hazırlaşa bilərəmmi?",
+    "a3": "Əlbəttə. Beynəlxalq səviyyədə tanınan İtalyan dil səriştəsini təsdiqləyən CILS və CELI sertifikatları üçün xüsusi imtahan hazırlıq kursları təklif edirik.",
+    "q4": "Fərdi dərslər var?",
+    "a4": "Bəli, həm qrup kursları, həm də fərdi birdən-bir dərslər var. Fərdi dərslər sizin imkanlarınıza uyğun çevik şəkildə planlaşdırıla bilər.",
+    "q5": "Necə qeydiyyatdan keçə bilərəm?",
+    "a5": "Instagram, Telegram, WhatsApp vasitəsilə bizimlə əlaqə saxlaya və ya Əlaqə səhifəmizə baş çəkə bilərsiniz. Səviyyəniz və hədəfləriniz üçün ən uyğun kursu tapaqda kömək edəcəyik."
+  },
+  "footer": {
+    "description": "Bütün səviyyələr üçün İtalyan dili kursları, orijinal İtalyan kafesi və Bakıda mədəni tədbirlər.",
+    "followUs": "Bizi izləyin",
+    "copyright": "© {year} Scuola Italiana Baku. Bütün hüquqlar qorunur."
+  },
+  "benefits": {
+    "oneTitle": "Niyə bizimlə İtalyan dilini öyrənməlisiniz?",
+    "oneDesc": "Scuola Italiana Baku peşəkar ana dilli müəllimlər, kommunikativ yanaşma və mehriban İtalyan atmosferini birləşdirir ki, effektiv öyrənəsiniz və hər dərsdən zövq alasınız.",
+    "nativeTeachersTitle": "Ana dilli İtalyan müəllimlər",
+    "nativeTeachersDesc": "Hər dərsdə real İtalyan mədəniyyətini gətirən peşəkar ana dilli danışanlardan öyrənin.",
+    "allLevelsTitle": "Bütün səviyyələr A1–C2",
+    "allLevelsDesc": "Mütləq başlanğıcdan qabaqcıla qədər CEFR ilə uyğunlaşdırılmış strukturlu kurslar.",
+    "examPrepTitle": "CILS & CELI imtahan hazırlığı",
+    "examPrepDesc": "Beynəlxalq səviyyədə tanınan İtalyan dil sertifikatlarına hazırlaşın.",
+    "twoTitle": "Sadəcə bir məktəbdən artıq",
+    "twoDesc": "Scuola Italiana Baku bir icmadır — dili öyrən, kafemizin keyfini çıxar, Bakıdakı tədbirlər və seminarlar vasitəsilə İtalyan mədəniyyətini yaşa.",
+    "cafeTitle": "Orijinal İtalyan kafesi",
+    "cafeDesc": "Real espresso, kapuçino və təzə bişmiş pestrilərlə İtalyan dilini məşq edin.",
+    "eventsTitle": "Mədəni tədbirlər & seminarlar",
+    "eventsDesc": "Film göstərişləri, kulinariya dərsləri, sənət haqqında söhbətlər və İtalyan bayram tədbirləri.",
+    "lessonsTitle": "Qrup & fərdi dərslər",
+    "lessonsDesc": "Cədvəlinizə uyğun çevik formatlar — kiçik qruplar və ya müəllimlə birdən-bir."
+  }
+}

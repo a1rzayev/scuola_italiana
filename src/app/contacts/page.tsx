@@ -1,40 +1,43 @@
+"use client";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactsPage() {
+  const { t } = useLanguage();
   return (
     <Container>
       <section className="pt-12 pb-16">
         <SectionTitle
-          preTitle="Contatti"
-          title="Contacts"
+          preTitle={t.contacts.preTitle}
+          title={t.contacts.title}
           align="left"
         >
-          Get in touch — we&apos;d love to hear from you.
+          {t.contacts.subtitle}
         </SectionTitle>
         <div className="max-w-2xl mt-8 space-y-6">
           <div className="p-6 rounded-lg bg-gray-50 dark:bg-trueGray-800">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Address</h3>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{t.contacts.address}</h3>
             <p className="mt-1 text-gray-600 dark:text-gray-300">
               Scuola Italiana Baku<br />
-              Baku, Azerbaijan
+              {t.contacts.addressLine}
             </p>
           </div>
           <div className="p-6 rounded-lg bg-gray-50 dark:bg-trueGray-800">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Phone &amp; Email</h3>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{t.contacts.phoneEmail}</h3>
             <p className="mt-1 text-gray-600 dark:text-gray-300">
               Email: info@scuolaitalianabaku.az
             </p>
           </div>
           <div className="p-6 rounded-lg bg-gray-50 dark:bg-trueGray-800">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Opening hours</h3>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{t.contacts.openingHours}</h3>
             <p className="mt-1 text-gray-600 dark:text-gray-300">
-              School &amp; Café: Mon–Fri 9:00–19:00, Sat 10:00–14:00<br />
-              Closed on Sundays and public holidays.
+              {t.contacts.openingHoursDetail}<br />
+              {t.contacts.closedSundays}
             </p>
           </div>
           <div className="p-6 rounded-lg bg-gray-50 dark:bg-trueGray-800">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Social</h3>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{t.contacts.social}</h3>
             <div className="mt-2 flex flex-wrap gap-4">
               <a
                 href="https://www.instagram.com/scuola_italiana_baku/"

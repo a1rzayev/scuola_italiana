@@ -3,8 +3,19 @@ import React from "react";
 import { Container } from "@/components/Container";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
+import { useLanguage } from "@/context/LanguageContext";
 
 export const Faq = () => {
+  const { t } = useLanguage();
+
+  const faqdata = [
+    { question: t.faq.q1, answer: t.faq.a1 },
+    { question: t.faq.q2, answer: t.faq.a2 },
+    { question: t.faq.q3, answer: t.faq.a3 },
+    { question: t.faq.q4, answer: t.faq.a4 },
+    { question: t.faq.q5, answer: t.faq.a5 },
+  ];
+
   return (
     <Container className="!p-0">
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
@@ -33,26 +44,3 @@ export const Faq = () => {
     </Container>
   );
 };
-
-const faqdata = [
-  {
-    question: "What levels do you offer?",
-    answer: "We offer courses from absolute beginner (A1) to advanced (C2), following the Common European Framework of Reference (CEFR).",
-  },
-  {
-    question: "Are the teachers native Italian speakers?",
-    answer: "Yes, our teachers are native or near-native Italian speakers with professional qualifications and experience in teaching Italian as a foreign language.",
-  },
-  {
-    question: "Can I prepare for CILS or CELI exams?",
-    answer: "Absolutely. We offer dedicated exam preparation courses for CILS and CELI certifications, which are internationally recognized Italian proficiency exams.",
-  },
-  {
-    question: "Do you offer private lessons?",
-    answer: "Yes, we offer both group courses and private one-on-one lessons. Private lessons can be scheduled flexibly to suit your availability.",
-  },
-  {
-    question: "How can I enroll?",
-    answer: "You can contact us via Instagram, Telegram, WhatsApp, or visit our Contacts page. We'll help you find the right course for your level and goals.",
-  },
-];

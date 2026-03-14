@@ -1,40 +1,39 @@
+"use client";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ServicesPage() {
+  const { t } = useLanguage();
   return (
     <Container>
       <section className="pt-12 pb-16">
         <SectionTitle
-          preTitle="Servizi"
-          title="Our Services"
+          preTitle={t.services.preTitle}
+          title={t.services.title}
         >
-          Discover what Scuola Italiana Baku offers — Italian language courses and an authentic Italian café.
+          {t.services.subtitle}
         </SectionTitle>
         <div className="grid gap-8 mt-12 md:grid-cols-2">
           <Link
             href="/services/cafe"
             className="block p-8 transition rounded-xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700"
           >
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Café</h3>
-            <p className="mt-3 text-gray-600 dark:text-gray-300">
-              Our Italian café in Baku offers authentic espresso, pastries, and a welcoming space to practice Italian and meet fellow learners.
-            </p>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{t.services.cafe}</h3>
+            <p className="mt-3 text-gray-600 dark:text-gray-300">{t.services.cafeDesc}</p>
             <span className="inline-flex items-center mt-4 text-italia-600 dark:text-italia-400 font-medium">
-              Visit the café →
+              {t.services.visitCafe}
             </span>
           </Link>
           <Link
             href="/services/course"
             className="block p-8 transition rounded-xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700"
           >
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Courses</h3>
-            <p className="mt-3 text-gray-600 dark:text-gray-300">
-              Italian language courses for every level — beginner to advanced. Group classes and private lessons with qualified native-speaking teachers.
-            </p>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{t.services.courses}</h3>
+            <p className="mt-3 text-gray-600 dark:text-gray-300">{t.services.coursesDesc}</p>
             <span className="inline-flex items-center mt-4 text-italia-600 dark:text-italia-400 font-medium">
-              View courses →
+              {t.services.viewCourses}
             </span>
           </Link>
         </div>

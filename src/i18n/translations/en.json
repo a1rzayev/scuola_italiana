@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "cafe": "Café",
+    "course": "Course",
+    "linguaItaliana": "Lingua Italiana",
+    "culturaItaliana": "Cultura Italiana",
+    "contacts": "Contacts"
+  },
+  "hero": {
+    "title": "Learn Italian in Baku",
+    "description": "Scuola Italiana Baku offers Italian language courses for all levels, an authentic Italian café, and cultural events. Discover the language and culture of Italy right here in Azerbaijan.",
+    "viewCourses": "View Courses",
+    "contactUs": "Contact Us",
+    "tagline": "Courses • Café • Lingua & Cultura Italiana in Baku"
+  },
+  "home": {
+    "preTitle": "Scuola Italiana Baku",
+    "sectionTitle": "Italian courses, culture & café in Baku",
+    "sectionDesc": "Learn Italian with qualified native-speaking teachers, practice in our authentic Italian café, and immerse yourself in Italian culture — all in the heart of Baku.",
+    "whatWeOffer": "What we offer",
+    "coursesServices": "Courses & Services",
+    "coursesServicesDesc": "Choose from group or private Italian lessons and enjoy our authentic Italian café, right here in Baku.",
+    "italianCourses": "Italian Courses",
+    "italianCoursesDesc": "From beginner to advanced — A1 to C2. Group and private lessons with native-speaking Italian teachers.",
+    "viewCourses": "View courses →",
+    "ourCafe": "Our Café",
+    "ourCafeDesc": "Authentic Italian espresso, cappuccino, pastries, and a welcoming space to practice Italian.",
+    "visitCafe": "Visit the café →",
+    "explore": "Explore",
+    "linguaCultura": "Lingua & Cultura",
+    "linguaCulturaDesc": "Dive into the Italian language and culture — grammar, vocabulary, art, history, and traditions.",
+    "linguaItaliana": "Lingua Italiana",
+    "culturaItaliana": "Cultura Italiana"
+  },
+  "about": {
+    "preTitle": "Chi siamo",
+    "title": "About Scuola Italiana Baku",
+    "subtitle": "We are Baku's Italian language school and cultural center, dedicated to bringing authentic Italian education and culture to Azerbaijan.",
+    "p1": "Scuola Italiana Baku was founded to bring authentic Italian language education and culture to Baku, Azerbaijan. Our teachers are native or near-native Italian speakers with professional experience in teaching Italian as a foreign language.",
+    "p2": "We offer group and private courses for all levels — from absolute beginners (A1) to advanced (C2) — as well as a cozy Italian café where you can practice your Italian in a relaxed setting while enjoying authentic Italian coffee and pastries.",
+    "p3": "Our mission is to make learning Italian enjoyable and effective while sharing the richness of Italian culture — from art, music, and cinema to food and traditions — with the Baku community.",
+    "p4": "Whether you want to study or work in Italy, prepare for CILS/CELI exams, or simply fall in love with the language, Scuola Italiana Baku is your home for everything Italian in Azerbaijan."
+  },
+  "contacts": {
+    "preTitle": "Contatti",
+    "title": "Contacts",
+    "subtitle": "Get in touch — we'd love to hear from you.",
+    "address": "Address",
+    "addressLine": "Baku, Azerbaijan",
+    "phoneEmail": "Phone & Email",
+    "openingHours": "Opening hours",
+    "openingHoursDetail": "School & Café: Mon–Fri 9:00–19:00, Sat 10:00–14:00",
+    "closedSundays": "Closed on Sundays and public holidays.",
+    "social": "Social"
+  },
+  "cultura": {
+    "preTitle": "La cultura",
+    "title": "Cultura Italiana",
+    "subtitle": "Art, history, traditions — discover Italian culture in Baku.",
+    "p1": "Italian culture has shaped Western art, music, cuisine, fashion, and design for centuries. From the Renaissance to contemporary cinema and food, Italy continues to inspire the world. At Scuola Italiana Baku we believe that understanding culture deepens your command of the language and makes learning more rewarding.",
+    "p2": "We regularly organize cultural events and workshops in Baku: Italian film screenings, cooking sessions, talks on art and history, and celebrations of Italian holidays and traditions. These activities are open to our students and the wider Baku community.",
+    "p3": "Join us to explore la dolce vita — the sweet life — through language, food, and culture. Check our Contacts page or follow us on Instagram for upcoming events."
+  },
+  "lingua": {
+    "preTitle": "La lingua",
+    "title": "Lingua Italiana",
+    "subtitle": "The Italian language — history, beauty, and why learn it in Baku.",
+    "p1": "Italian is a Romance language spoken by over 85 million people worldwide. It descends from Latin and is known for its musicality, clear vowel sounds, and expressive beauty. Learning Italian opens the door to one of the world's richest literary, artistic, and culinary traditions.",
+    "p2": "At Scuola Italiana Baku we focus on all four skills — listening, speaking, reading, and writing — with special attention to pronunciation and real-life communication. Our materials include authentic Italian texts, videos, music, and conversation practice so you can use the language in meaningful contexts from the very first lesson.",
+    "p3": "Whether you plan to travel, work, or study in Italy, or simply love the language, we are here to help you reach your goals right here in Baku. Explore our courses to get started."
+  },
+  "services": {
+    "preTitle": "Servizi",
+    "title": "Our Services",
+    "subtitle": "Discover what Scuola Italiana Baku offers — Italian language courses and an authentic Italian café.",
+    "cafe": "Café",
+    "cafeDesc": "Our Italian café in Baku offers authentic espresso, pastries, and a welcoming space to practice Italian and meet fellow learners.",
+    "visitCafe": "Visit the café →",
+    "courses": "Courses",
+    "coursesDesc": "Italian language courses for every level — beginner to advanced. Group classes and private lessons with qualified native-speaking teachers.",
+    "viewCourses": "View courses →"
+  },
+  "cafe": {
+    "preTitle": "Caffè",
+    "title": "Our Italian Café in Baku",
+    "subtitle": "A taste of Italy in every cup — authentic espresso, pastries, and conversation.",
+    "p1": "Our café is the heart of Scuola Italiana Baku. Here you can enjoy authentic Italian coffee — espresso, cappuccino, macchiato — and freshly baked Italian pastries. It's the perfect place to practice your Italian in an informal setting or simply relax between lessons.",
+    "p2": "We host conversation tables and cultural events so you can meet other students and native Italian speakers right here in Baku. Whether you're a beginner or an advanced learner, you're always welcome.",
+    "p3": "Opening hours and menu details are available on our Contacts page. Vi aspettiamo!"
+  },
+  "course": {
+    "preTitle": "Corsi",
+    "title": "Italian Language Courses in Baku",
+    "subtitle": "From A1 to C2 — structured courses and flexible options for every goal.",
+    "p1": "Scuola Italiana Baku offers Italian language courses aligned with the Common European Framework (CEFR). You can choose group courses for a social learning experience or private lessons for a personalized pace. All our teachers are qualified native Italian speakers who use communicative methods so you start using the language from day one.",
+    "p2": "Course types include: general Italian (all levels A1–C2), conversation practice, exam preparation (CILS, CELI), and business Italian. Schedules are designed to fit working adults and students alike.",
+    "p3": "For more information on levels, schedules, and enrollment, please visit our Contacts page, message us on Instagram, or drop by the school."
+  },
+  "cta": {
+    "title": "Ready to learn Italian in Baku?",
+    "desc": "Join our courses or visit our café. Get in touch for more information.",
+    "button": "Contact Us"
+  },
+  "faq": {
+    "q1": "What levels do you offer?",
+    "a1": "We offer courses from absolute beginner (A1) to advanced (C2), following the Common European Framework of Reference (CEFR).",
+    "q2": "Are the teachers native Italian speakers?",
+    "a2": "Yes, our teachers are native or near-native Italian speakers with professional qualifications and experience in teaching Italian as a foreign language.",
+    "q3": "Can I prepare for CILS or CELI exams?",
+    "a3": "Absolutely. We offer dedicated exam preparation courses for CILS and CELI certifications, which are internationally recognized Italian proficiency exams.",
+    "q4": "Do you offer private lessons?",
+    "a4": "Yes, we offer both group courses and private one-on-one lessons. Private lessons can be scheduled flexibly to suit your availability.",
+    "q5": "How can I enroll?",
+    "a5": "You can contact us via Instagram, Telegram, WhatsApp, or visit our Contacts page. We'll help you find the right course for your level and goals."
+  },
+  "footer": {
+    "description": "Italian language courses for all levels, an authentic Italian café, and cultural events in Baku, Azerbaijan.",
+    "followUs": "Follow us",
+    "copyright": "Copyright © {year} Scuola Italiana Baku."
+  },
+  "benefits": {
+    "oneTitle": "Why learn Italian with us?",
+    "oneDesc": "Scuola Italiana Baku combines qualified native teachers, a communicative approach, and a welcoming Italian atmosphere so you learn effectively and enjoy every lesson.",
+    "nativeTeachersTitle": "Native Italian teachers",
+    "nativeTeachersDesc": "Learn from qualified native speakers who bring real Italian culture into every class.",
+    "allLevelsTitle": "All levels A1–C2",
+    "allLevelsDesc": "Structured courses aligned with the CEFR, from absolute beginner to advanced.",
+    "examPrepTitle": "CILS & CELI exam prep",
+    "examPrepDesc": "Prepare for internationally recognized Italian proficiency certifications.",
+    "twoTitle": "More than just a school",
+    "twoDesc": "Scuola Italiana Baku is a community — learn the language, enjoy our café, and experience Italian culture through events and workshops in Baku.",
+    "cafeTitle": "Authentic Italian café",
+    "cafeDesc": "Practice Italian over real espresso, cappuccino, and freshly baked pastries.",
+    "eventsTitle": "Cultural events & workshops",
+    "eventsDesc": "Film screenings, cooking sessions, art talks, and Italian holiday celebrations.",
+    "lessonsTitle": "Group & private lessons",
+    "lessonsDesc": "Flexible formats to fit your schedule — small groups or one-on-one with a teacher."
+  }
+}
