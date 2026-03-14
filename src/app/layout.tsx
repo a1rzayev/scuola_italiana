@@ -5,14 +5,13 @@ import "./globals.css";
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { PopupWidget }  from "@/components/PopupWidget";
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Scuola Italiana — Italian Courses, Café & Culture",
-  description: "Learn Italian with Scuola Italiana. Courses for all levels, Italian café, and cultural events. Lingua e cultura italiana.",
+  title: "Scuola Italiana Baku — Italian Courses, Café & Culture in Baku",
+  description: "Learn Italian in Baku with Scuola Italiana. Courses for all levels, authentic Italian café, and cultural events. Lingua e cultura italiana a Baku.",
   icons: {
     icon: "/img/logo.png",
     shortcut: "/img/logo.png",
@@ -32,7 +31,6 @@ export default function RootLayout({
           <Navbar />
           <div>{children}</div>
           <Footer />
-          <PopupWidget />
         </ThemeProvider>
       </body>
     </html>

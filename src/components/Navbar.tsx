@@ -4,6 +4,7 @@ import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure, Menu } from "@headlessui/react";
 import { SearchBar } from "./SearchBar";
+import { useState } from "react";
 
 const mainNav = [
   { name: "Home", href: "/" },
@@ -20,24 +21,58 @@ const mainNav = [
   { name: "Contacts", href: "/contacts" },
 ];
 
+const languages = ["AZ", "EN", "IT"];
+
 export const Navbar = () => {
+  const [lang, setLang] = useState("EN");
+
   return (
     <div className="w-full">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
-        <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-italia-600 dark:text-gray-100">
-          <span>
-            <Image
-              src="/img/logo.png"
-              width="32"
-              alt="Scuola Italiana logo"
-              height="32"
-              className="w-8"
-            />
-          </span>
-          <span>Scuola Italiana</span>
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-italia-600 dark:text-gray-100">
+            <span>
+              <Image
+                src="/img/logo.png"
+                width="32"
+                alt="Scuola Italiana logo"
+                height="32"
+                className="w-8"
+              />
+            </span>
+            <span>Scuola Italiana Baku</span>
+          </Link>
+          <a
+            href="https://www.instagram.com/scuola_italiana_baku/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-italia-600 dark:text-gray-500 dark:hover:text-italia-400 transition-colors"
+            aria-label="Instagram"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </div>
 
         <div className="flex items-center gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
+          <div className="flex items-center gap-1">
+            {languages.map((l) => (
+              <button
+                key={l}
+                onClick={() => setLang(l)}
+                className={`px-2 py-1 text-sm font-medium rounded transition-colors ${
+                  lang === l
+                    ? "text-italia-600 dark:text-italia-400 font-semibold"
+                    : "text-gray-500 dark:text-gray-400 hover:text-italia-500"
+                }`}
+              >
+                {l}
+              </button>
+            ))}
+          </div>
           <SearchBar />
           <ThemeChanger />
         </div>

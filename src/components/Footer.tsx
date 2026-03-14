@@ -21,26 +21,18 @@ export function Footer() {
                   height="32"
                   className="w-8"
                 />
-                <span>Scuola Italiana</span>
+                <span>Scuola Italiana Baku</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Italian courses for all levels, a welcoming café, and cultural events. Learn the language and discover the culture of Italy.
+              Italian language courses for all levels, an authentic Italian café, and cultural events in Baku, Azerbaijan.
             </div>
           </div>
 
           <div className="">
             <div>Follow us</div>
             <div className="mt-5 space-y-2 text-gray-600 dark:text-gray-400 text-sm">
-              <a
-                href="https://www.instagram.com/scuola_italiana_baku/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:text-italia-600 dark:hover:text-italia-400"
-              >
-                Instagram
-              </a>
               <a
                 href="https://t.me/your-telegram"
                 target="_blank"
@@ -62,7 +54,7 @@ export function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()} Scuola Italiana.
+          Copyright © {new Date().getFullYear()} Scuola Italiana Baku.
         </div>
       </Container>
       {/* Do not remove this */}
