@@ -11,46 +11,46 @@ import benefitOneImg from "../../public/img/benefit-one.png";
 import benefitTwoImg from "../../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Why learn Italian with us?",
+  desc: "Scuola Italiana Baku combines qualified native teachers, a communicative approach, and a welcoming Italian atmosphere so you learn effectively and enjoy every lesson.",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Native Italian teachers",
+      desc: "Learn from qualified native speakers who bring real Italian culture into every class.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "All levels A1–C2",
+      desc: "Structured courses aligned with the CEFR, from absolute beginner to advanced.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "CILS & CELI exam prep",
+      desc: "Prepare for internationally recognized Italian proficiency certifications.",
       icon: <CursorArrowRaysIcon />,
     },
   ],
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "More than just a school",
+  desc: "Scuola Italiana Baku is a community — learn the language, enjoy our café, and experience Italian culture through events and workshops in Baku.",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: "Authentic Italian café",
+      desc: "Practice Italian over real espresso, cappuccino, and freshly baked pastries.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: "Cultural events & workshops",
+      desc: "Film screenings, cooking sessions, art talks, and Italian holiday celebrations.",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: "Group & private lessons",
+      desc: "Flexible formats to fit your schedule — small groups or one-on-one with a teacher.",
       icon: <SunIcon />,
     },
   ],

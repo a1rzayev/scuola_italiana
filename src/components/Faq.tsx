@@ -8,7 +8,7 @@ export const Faq = () => {
   return (
     <Container className="!p-0">
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
-        {faqdata.map((item, index) => (
+        {faqdata.map((item) => (
           <div key={item.question} className="mb-5">
             <Disclosure>
               {({ open }) => (
@@ -32,25 +32,27 @@ export const Faq = () => {
       </div>
     </Container>
   );
-}
+};
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "What levels do you offer?",
+    answer: "We offer courses from absolute beginner (A1) to advanced (C2), following the Common European Framework of Reference (CEFR).",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "Are the teachers native Italian speakers?",
+    answer: "Yes, our teachers are native or near-native Italian speakers with professional qualifications and experience in teaching Italian as a foreign language.",
   },
   {
-    question: "What is your refund policy? ",
-    answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+    question: "Can I prepare for CILS or CELI exams?",
+    answer: "Absolutely. We offer dedicated exam preparation courses for CILS and CELI certifications, which are internationally recognized Italian proficiency exams.",
   },
   {
-    question: "Do you offer technical support? ",
-    answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+    question: "Do you offer private lessons?",
+    answer: "Yes, we offer both group courses and private one-on-one lessons. Private lessons can be scheduled flexibly to suit your availability.",
+  },
+  {
+    question: "How can I enroll?",
+    answer: "You can contact us via Instagram, Telegram, WhatsApp, or visit our Contacts page. We'll help you find the right course for your level and goals.",
   },
 ];

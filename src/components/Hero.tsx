@@ -10,11 +10,11 @@ export const Hero = () => {
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl mb-8">
             <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-              Learn Italian with Scuola Italiana
+              Learn Italian in Baku
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-              Italian courses for all levels, a welcoming café, and cultural events. 
-              Discover the language and culture of Italy with qualified teachers and a vibrant community.
+              Scuola Italiana Baku offers Italian language courses for all levels, an authentic Italian café, and cultural events. 
+              Discover the language and culture of Italy right here in Azerbaijan.
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
@@ -38,7 +38,7 @@ export const Hero = () => {
               width="616"
               height="617"
               className={"object-cover"}
-              alt="Hero Illustration"
+              alt="Scuola Italiana Baku"
               loading="eager"
               placeholder="blur"
             />
@@ -48,10 +48,10 @@ export const Hero = () => {
       <Container>
         <div className="flex flex-col justify-center">
           <div className="text-xl text-center text-gray-700 dark:text-white">
-            Courses • Café • <span className="text-italia-600">Lingua</span> &amp; <span className="text-italia-600">Cultura</span>
+            Courses • Café • <span className="text-italia-600">Lingua</span> &amp; <span className="text-italia-600">Cultura Italiana</span> in Baku
           </div>
         </div>
       </Container>
     </>
   );
-}
+};

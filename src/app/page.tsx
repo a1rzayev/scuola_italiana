@@ -11,10 +11,10 @@ export default function Home() {
     <Container>
       <Hero />
       <SectionTitle
-        preTitle="Scuola Italiana"
-        title="Italian courses, culture & café"
+        preTitle="Scuola Italiana Baku"
+        title="Italian courses, culture & café in Baku"
       >
-        Learn Italian with qualified teachers, practice in our café, and discover Italian culture. Courses for all levels and a welcoming community.
+        Learn Italian with qualified native-speaking teachers, practice in our authentic Italian café, and immerse yourself in Italian culture — all in the heart of Baku.
       </SectionTitle>
 
       <Benefits data={benefitOne} />
@@ -24,7 +24,7 @@ export default function Home() {
         preTitle="What we offer"
         title="Courses & Services"
       >
-        Choose from group or private Italian lessons and enjoy our Italian café.
+        Choose from group or private Italian lessons and enjoy our authentic Italian café, right here in Baku.
       </SectionTitle>
 
       <div className="grid gap-6 mt-8 md:grid-cols-2">
@@ -34,7 +34,7 @@ export default function Home() {
         >
           <h3 className="text-xl font-bold text-gray-800 dark:text-white">Italian Courses</h3>
           <p className="mt-2 text-gray-600 dark:text-gray-300">
-            From beginner to advanced. Group and private lessons with native-speaking teachers.
+            From beginner to advanced — A1 to C2. Group and private lessons with native-speaking Italian teachers.
           </p>
           <span className="inline-block mt-3 text-italia-600 dark:text-italia-400 font-medium">View courses →</span>
         </Link>
@@ -44,14 +44,14 @@ export default function Home() {
         >
           <h3 className="text-xl font-bold text-gray-800 dark:text-white">Our Café</h3>
           <p className="mt-2 text-gray-600 dark:text-gray-300">
-            Authentic Italian coffee, pastries, and a space to practice Italian and meet others.
+            Authentic Italian espresso, cappuccino, pastries, and a welcoming space to practice Italian.
           </p>
           <span className="inline-block mt-3 text-italia-600 dark:text-italia-400 font-medium">Visit the café →</span>
         </Link>
       </div>
 
       <SectionTitle preTitle="Explore" title="Lingua & Cultura">
-        Dive into the Italian language and culture—grammar, vocabulary, art, and traditions.
+        Dive into the Italian language and culture — grammar, vocabulary, art, history, and traditions.
       </SectionTitle>
 
       <div className="flex flex-wrap justify-center gap-4 mt-6">
