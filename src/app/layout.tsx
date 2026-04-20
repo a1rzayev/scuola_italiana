@@ -7,12 +7,12 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
 
-
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
   title: "Scuola Italiana Baku — Italian Courses, Café & Culture in Baku",
-  description: "Learn Italian in Baku with Scuola Italiana. Courses for all levels, authentic Italian café, and cultural events. Lingua e cultura italiana a Baku.",
+  description:
+    "Learn Italian in Baku with Scuola Italiana. Courses for all levels, authentic Italian café, and cultural events. Lingua e cultura italiana a Baku.",
   icons: {
     icon: "/img/logo.png",
     shortcut: "/img/logo.png",
@@ -27,11 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class">
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <LanguageProvider>
             <Navbar />
-            <div>{children}</div>
+            <main className="flex-1">{children}</main>
             <Footer />
           </LanguageProvider>
         </ThemeProvider>

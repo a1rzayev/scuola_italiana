@@ -2,16 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   html,
   body {
-    @apply dark:bg-trueGray-900;
+    @apply bg-white dark:bg-trueGray-900;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  /* Italian theme: green focus for accessibility */
+
+  ::selection {
+    @apply bg-italia-100 text-italia-900;
+  }
+
   *:focus-visible {
     @apply outline-none ring-2 ring-italia-500 ring-offset-2 dark:ring-offset-trueGray-900;
   }
 }
 
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+    animation-fill-mode: both;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+    animation-fill-mode: both;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+    animation-fill-mode: both;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+    animation-fill-mode: both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

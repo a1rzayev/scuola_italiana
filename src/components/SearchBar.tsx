@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { searchIndex } from "@/lib/searchIndex";
 
 export function SearchBar() {
@@ -10,6 +11,7 @@ export function SearchBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (!query.trim()) {
@@ -49,7 +51,9 @@ export function SearchBar() {
         setFocusedIndex((i) => (i > 0 ? i - 1 : results.length - 1));
       } else if (e.key === "Enter" && focusedIndex >= 0 && results[focusedIndex]) {
         e.preventDefault();
-        window.location.href = results[focusedIndex].href;
+        router.push(results[focusedIndex].href);
+        setIsOpen(false);
+        setQuery("");
       } else if (e.key === "Escape") {
         setIsOpen(false);
         setFocusedIndex(-1);
@@ -57,32 +61,40 @@ export function SearchBar() {
     }
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, results, focusedIndex]);
+  }, [isOpen, results, focusedIndex, router]);
 
   return (
     <div ref={wrapperRef} className="relative">
       <div className="relative">
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">
-          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 pointer-events-none">
+          <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
           </svg>
         </span>
         <input
           type="search"
-          placeholder="Search site..."
+          placeholder="Search…"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
             setIsOpen(true);
           }}
           onFocus={() => query && setIsOpen(true)}
-          className="w-40 pl-9 pr-3 py-2 text-sm border border-gray-200 rounded-lg bg-gray-50 dark:bg-trueGray-800 dark:border-trueGray-600 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-italia-500 focus:border-transparent sm:w-48"
+          className="w-36 sm:w-44 pl-8 pr-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-gray-50 dark:bg-trueGray-800 dark:border-trueGray-700 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-italia-500 focus:border-transparent transition-all duration-200"
           aria-label="Search within site"
+          aria-autocomplete="list"
+          aria-expanded={isOpen && (results.length > 0 || query.trim().length > 0)}
         />
       </div>
+
       {isOpen && results.length > 0 && (
         <ul
-          className="absolute top-full left-0 right-0 mt-1 py-1 bg-white dark:bg-trueGray-800 border border-gray-200 dark:border-trueGray-600 rounded-lg shadow-lg z-50 max-h-72 overflow-auto"
+          className="absolute top-full right-0 mt-1.5 w-72 py-1.5 bg-white dark:bg-trueGray-800 border border-gray-100 dark:border-trueGray-700 rounded-xl shadow-card-hover z-50 max-h-72 overflow-auto animate-slide-down"
           role="listbox"
         >
           {results.map((item, index) => (
@@ -93,19 +105,26 @@ export function SearchBar() {
                   setIsOpen(false);
                   setQuery("");
                 }}
-                className={`block px-4 py-2 text-left hover:bg-italia-50 dark:hover:bg-italia-900/30 ${
-                  index === focusedIndex ? "bg-italia-50 dark:bg-italia-900/30" : ""
+                className={`block px-4 py-2.5 transition-colors duration-150 ${
+                  index === focusedIndex
+                    ? "bg-italia-50 dark:bg-italia-900/30"
+                    : "hover:bg-gray-50 dark:hover:bg-trueGray-700"
                 }`}
               >
-                <span className="font-medium text-gray-900 dark:text-white">{item.title}</span>
-                <span className="block text-sm text-gray-500 dark:text-gray-400 truncate">{item.description}</span>
+                <span className="font-medium text-sm text-gray-900 dark:text-white">
+                  {item.title}
+                </span>
+                <span className="block text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
+                  {item.description}
+                </span>
               </Link>
             </li>
           ))}
         </ul>
       )}
+
       {isOpen && query.trim() && results.length === 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 py-4 px-4 bg-white dark:bg-trueGray-800 border border-gray-200 dark:border-trueGray-600 rounded-lg shadow-lg z-50 text-center text-gray-500 dark:text-gray-400 text-sm">
+        <div className="absolute top-full right-0 mt-1.5 w-64 py-4 px-4 bg-white dark:bg-trueGray-800 border border-gray-100 dark:border-trueGray-700 rounded-xl shadow-card-hover z-50 text-center text-sm text-gray-500 dark:text-gray-400 animate-slide-down">
           No results for &quot;{query}&quot;
         </div>
       )}
