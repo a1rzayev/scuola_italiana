@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { useLanguage } from "@/context/LanguageContext";
+import { REGISTRATION_FORM_URL } from "@/lib/registrationForm";
 
 export const Cta = () => {
   const { t } = useLanguage();
@@ -21,12 +22,20 @@ export const Cta = () => {
             {t.cta.desc}
           </p>
         </div>
-        <div className="relative flex-shrink-0 w-full text-center lg:w-auto">
+        <div className="relative flex-shrink-0 w-full flex flex-col sm:flex-row items-center justify-center gap-3 text-center lg:w-auto lg:flex-col xl:flex-row">
+          <a
+            href={REGISTRATION_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block w-full sm:w-auto py-3.5 px-8 lg:px-10 lg:py-4 text-base font-semibold text-italiaRed-600 bg-white rounded-xl hover:bg-gray-50 transition-all duration-200 shadow-sm hover:shadow-md"
+          >
+            {t.cta.registerButton}
+          </a>
           <Link
             href="/contacts"
-            className="inline-block py-3.5 px-8 lg:px-10 lg:py-4 text-base font-semibold text-italiaRed-600 bg-white rounded-xl hover:bg-gray-50 transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-block w-full sm:w-auto py-3 px-8 text-base font-semibold text-white/95 border border-white/40 rounded-xl hover:bg-white/10 transition-colors duration-200"
           >
-            {t.cta.button}
+            {t.cta.contactButton}
           </Link>
         </div>
       </div>

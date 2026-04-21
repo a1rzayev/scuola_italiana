@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { useLanguage } from "@/context/LanguageContext";
+import { REGISTRATION_FORM_URL } from "@/lib/registrationForm";
+import courseImg from "../../../../public/img/pages/course.jpg";
 
 const levels = [
   { key: "a1" as const, color: "bg-italia-50 dark:bg-italia-900/20 border-italia-100 dark:border-italia-800/40", badge: "bg-italia-100 text-italia-800 dark:bg-italia-900/60 dark:text-italia-300" },
@@ -38,10 +41,19 @@ export default function CoursePage() {
       </SectionTitle>
 
       <Container className="pb-4">
-        {/* Intro */}
-        <p className="max-w-3xl mt-2 text-base leading-relaxed text-gray-600 dark:text-gray-300">
-          {t.course.p1}
-        </p>
+        <div className="mt-2 grid gap-8 lg:grid-cols-2 lg:items-start">
+          <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+            {t.course.p1}
+          </p>
+          <div className="overflow-hidden rounded-2xl border border-gray-100 dark:border-trueGray-700 lg:sticky lg:top-24">
+            <Image
+              src={courseImg}
+              alt="Italian language class"
+              className="w-full h-64 md:h-80 object-contain bg-gray-100 dark:bg-trueGray-800"
+              priority
+            />
+          </div>
+        </div>
       </Container>
 
       {/* ── Levels ─────────────────────────────────────────── */}
@@ -156,20 +168,29 @@ export default function CoursePage() {
               {t.course.ctaDesc}
             </p>
           </div>
-          <div className="flex-shrink-0">
-            <Link
-              href="/contacts"
-              className="group inline-flex items-center gap-2 px-7 py-3.5 font-semibold text-white bg-italia-600 rounded-xl hover:bg-italia-700 dark:bg-italia-500 dark:hover:bg-italia-600 transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
+          <div className="flex-shrink-0 flex flex-col sm:flex-row gap-3">
+            <a
+              href={REGISTRATION_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold text-white bg-italia-600 rounded-xl hover:bg-italia-700 dark:bg-italia-500 dark:hover:bg-italia-600 transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
             >
-              {t.course.ctaButton}
+              {t.course.ctaRegisterButton}
               <svg
                 className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
+            </a>
+            <Link
+              href="/contacts"
+              className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold text-italia-700 dark:text-italia-300 bg-white dark:bg-trueGray-900 border-2 border-italia-600 dark:border-italia-500 rounded-xl hover:bg-italia-50 dark:hover:bg-italia-900/20 transition-all duration-200 whitespace-nowrap"
+            >
+              {t.course.ctaButton}
             </Link>
           </div>
         </div>

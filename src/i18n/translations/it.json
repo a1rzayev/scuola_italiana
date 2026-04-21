@@ -7,12 +7,14 @@
     "course": "Corsi",
     "linguaItaliana": "Lingua Italiana",
     "culturaItaliana": "Cultura Italiana",
-    "contacts": "Contatti"
+    "contacts": "Contatti",
+    "gallery": "Galleria"
   },
   "hero": {
     "title": "Impara l'italiano a Baku",
     "description": "Scuola Italiana Baku offre corsi di lingua italiana per tutti i livelli, un autentico caffè italiano ed eventi culturali. Scopri la lingua e la cultura d'Italia qui in Azerbaigian.",
     "viewCourses": "Vedi i corsi",
+    "registrationForm": "Iscrizione corsi",
     "contactUs": "Contattaci",
     "tagline": "Corsi • Caffè • Lingua & Cultura Italiana a Baku"
   },
@@ -33,7 +35,10 @@
     "linguaCultura": "Lingua & Cultura",
     "linguaCulturaDesc": "Scopri la lingua e la cultura italiana — grammatica, vocabolario, arte, storia e tradizioni.",
     "linguaItaliana": "Lingua Italiana",
-    "culturaItaliana": "Cultura Italiana"
+    "culturaItaliana": "Cultura Italiana",
+    "galleryTitle": "Galleria",
+    "galleryDesc": "Uno sguardo alla vita della Scuola Italiana Baku — corsi, caffè ed eventi.",
+    "viewGallery": "Vedi tutte le foto →"
   },
   "about": {
     "preTitle": "Chi siamo",
@@ -54,7 +59,10 @@
     "openingHours": "Orari di apertura",
     "openingHoursDetail": "Scuola & Caffè: Lun–Ven 9:00–19:00, Sab 10:00–14:00",
     "closedSundays": "Chiuso la domenica e nei giorni festivi.",
-    "social": "Social"
+    "social": "Social",
+    "registrationTitle": "Modulo di iscrizione ai corsi",
+    "registrationDesc": "Richiedi informazioni sui corsi di italiano — obiettivi, livello, orari e formato. Il modulo si apre in Google Forms (azerbaigiano).",
+    "registrationButton": "Apri il modulo di iscrizione"
   },
   "cultura": {
     "preTitle": "La cultura",
@@ -123,13 +131,31 @@
     "examCeli": "CELI — Università per Stranieri di Perugia",
     "examPlida": "PLIDA — Società Dante Alighieri",
     "ctaTitle": "Pronto a iniziare?",
-    "ctaDesc": "Contattaci per trovare il tuo livello e scegliere il corso giusto. Ti accompagniamo passo dopo passo.",
-    "ctaButton": "Contattaci"
+    "ctaDesc": "Compila il modulo di richiesta corsi o contattaci — ti aiuteremo a trovare il livello e il corso giusti.",
+    "ctaButton": "Contattaci",
+    "ctaRegisterButton": "Apri il modulo di iscrizione"
+  },
+  "gallery": {
+    "preTitle": "Galleria",
+    "title": "Galleria Fotografica",
+    "subtitle": "Uno sguardo alla vita della Scuola Italiana Baku — corsi, caffè, eventi e altro ancora.",
+    "all": "Tutti",
+    "courses": "Corsi",
+    "cafe": "Caffè",
+    "events": "Eventi",
+    "school": "Scuola",
+    "close": "Chiudi",
+    "previous": "Foto precedente",
+    "next": "Foto successiva",
+    "comingSoon": "Foto in arrivo",
+    "comingSoonDesc": "Stiamo aggiungendo le foto — torna presto."
   },
   "cta": {
     "title": "Pronto a imparare l'italiano a Baku?",
-    "desc": "Iscriviti ai nostri corsi o visita il nostro caffè. Contattaci per maggiori informazioni.",
-    "button": "Contattaci"
+    "desc": "Iscriviti ai nostri corsi o visita il nostro caffè. Registra il tuo interesse o contattaci per maggiori informazioni.",
+    "button": "Contattaci",
+    "registerButton": "Modulo di iscrizione ai corsi",
+    "contactButton": "Contattaci"
   },
   "faq": {
     "q1": "Quali livelli offrite?",
@@ -141,7 +167,7 @@
     "q4": "Offrite lezioni private?",
     "a4": "Sì, offriamo sia corsi in gruppo che lezioni private one-to-one. Le lezioni private possono essere programmate in modo flessibile in base alla tua disponibilità.",
     "q5": "Come posso iscrivermi?",
-    "a5": "Puoi contattarci tramite Instagram, Telegram, WhatsApp o visitare la nostra pagina Contatti. Ti aiuteremo a trovare il corso giusto per il tuo livello e i tuoi obiettivi."
+    "a5": "Compila il modulo di iscrizione nella pagina Contatti (Google Form), scrivici su Instagram o usa l'email nella pagina Contatti. Ti aiuteremo a trovare il corso giusto per il tuo livello e i tuoi obiettivi."
   },
   "footer": {
     "description": "Corsi di lingua italiana per tutti i livelli, un autentico caffè italiano ed eventi culturali a Baku, Azerbaigian.",

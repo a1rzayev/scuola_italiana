@@ -4,7 +4,6 @@ import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Benefits } from "@/components/Benefits";
-import { Cta } from "@/components/Cta";
 import { useLanguage } from "@/context/LanguageContext";
 import {
   FaceSmileIcon,
@@ -162,7 +161,6 @@ export default function Home() {
         </div>
       </Container>
 
-      <Cta />
     </>
   );
 }

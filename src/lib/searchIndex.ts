@@ -1,3 +1,5 @@
+import { REGISTRATION_FORM_URL } from "@/lib/registrationForm";
+
 export interface SearchItem {
   title: string;
   href: string;
@@ -6,6 +8,12 @@ export interface SearchItem {
 }
 
 export const searchIndex: SearchItem[] = [
+  {
+    title: "Course registration",
+    href: REGISTRATION_FORM_URL,
+    description: "Italian course inquiry — Google Form (Scuola Italiana Baku)",
+    keywords: ["register", "registration", "form", "enroll", "enquiry", "inquiry", "google", "qeydiyyat", "sorğu", "iscrizione", "modulo"],
+  },
   {
     title: "Home",
     href: "/",

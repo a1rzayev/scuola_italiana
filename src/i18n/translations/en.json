@@ -7,12 +7,14 @@
     "course": "Course",
     "linguaItaliana": "Lingua Italiana",
     "culturaItaliana": "Cultura Italiana",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "gallery": "Gallery"
   },
   "hero": {
     "title": "Learn Italian in Baku",
     "description": "Scuola Italiana Baku offers Italian language courses for all levels, an authentic Italian café, and cultural events. Discover the language and culture of Italy right here in Azerbaijan.",
     "viewCourses": "View Courses",
+    "registrationForm": "Course registration",
     "contactUs": "Contact Us",
     "tagline": "Courses • Café • Lingua & Cultura Italiana in Baku"
   },
@@ -33,7 +35,10 @@
     "linguaCultura": "Lingua & Cultura",
     "linguaCulturaDesc": "Dive into the Italian language and culture — grammar, vocabulary, art, history, and traditions.",
     "linguaItaliana": "Lingua Italiana",
-    "culturaItaliana": "Cultura Italiana"
+    "culturaItaliana": "Cultura Italiana",
+    "galleryTitle": "Gallery",
+    "galleryDesc": "A glimpse of life at Scuola Italiana Baku — courses, café, and events.",
+    "viewGallery": "View all photos →"
   },
   "about": {
     "preTitle": "Chi siamo",
@@ -54,7 +59,10 @@
     "openingHours": "Opening hours",
     "openingHoursDetail": "School & Café: Mon–Fri 9:00–19:00, Sat 10:00–14:00",
     "closedSundays": "Closed on Sundays and public holidays.",
-    "social": "Social"
+    "social": "Social",
+    "registrationTitle": "Course registration form",
+    "registrationDesc": "Request information about Italian courses — your goals, level, schedule, and format. The form opens in Google Forms (Azerbaijani).",
+    "registrationButton": "Open registration form"
   },
   "cultura": {
     "preTitle": "La cultura",
@@ -123,13 +131,31 @@
     "examCeli": "CELI — Università per Stranieri di Perugia",
     "examPlida": "PLIDA — Società Dante Alighieri",
     "ctaTitle": "Ready to begin?",
-    "ctaDesc": "Contact us to find your level and choose the right course. We'll guide you every step of the way.",
-    "ctaButton": "Get in touch"
+    "ctaDesc": "Fill out our course inquiry form or contact us — we'll help you find the right level and course.",
+    "ctaButton": "Contact us",
+    "ctaRegisterButton": "Open registration form"
+  },
+  "gallery": {
+    "preTitle": "Galleria",
+    "title": "Photo Gallery",
+    "subtitle": "A glimpse of life at Scuola Italiana Baku — courses, café, events, and more.",
+    "all": "All",
+    "courses": "Courses",
+    "cafe": "Café",
+    "events": "Events",
+    "school": "School",
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "comingSoon": "Photos coming soon",
+    "comingSoonDesc": "We are adding photos — check back soon."
   },
   "cta": {
     "title": "Ready to learn Italian in Baku?",
-    "desc": "Join our courses or visit our café. Get in touch for more information.",
-    "button": "Contact Us"
+    "desc": "Join our courses or visit our café. Register your interest or get in touch for more information.",
+    "button": "Contact Us",
+    "registerButton": "Course registration form",
+    "contactButton": "Contact us"
   },
   "faq": {
     "q1": "What levels do you offer?",
@@ -141,7 +167,7 @@
     "q4": "Do you offer private lessons?",
     "a4": "Yes, we offer both group courses and private one-on-one lessons. Private lessons can be scheduled flexibly to suit your availability.",
     "q5": "How can I enroll?",
-    "a5": "You can contact us via Instagram, Telegram, WhatsApp, or visit our Contacts page. We'll help you find the right course for your level and goals."
+    "a5": "Fill out the course registration form on our Contacts page (Google Form), message us on Instagram, or use the email on Contacts. We'll help you find the right course for your level and goals."
   },
   "footer": {
     "description": "Italian language courses for all levels, an authentic Italian café, and cultural events in Baku, Azerbaijan.",

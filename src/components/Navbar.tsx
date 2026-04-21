@@ -85,9 +85,9 @@ export const Navbar = () => {
         </div>
 
         {/* Right controls */}
-        <div className="flex items-center gap-2 ml-auto lg:ml-0 lg:order-2">
+        <div className="flex items-center gap-1.5 ml-auto lg:ml-0 lg:order-2">
           {/* Language switcher — segmented control */}
-          <div className="flex items-center gap-0.5 rounded-lg bg-gray-100 dark:bg-trueGray-800 p-0.5">
+          <div className="hidden sm:flex items-center gap-0.5 rounded-lg bg-gray-100 dark:bg-trueGray-800 p-0.5">
             {languages.map((l) => (
               <button
                 key={l}
@@ -138,6 +138,23 @@ export const Navbar = () => {
 
               <Disclosure.Panel className="w-full mt-2 pb-3 lg:hidden animate-slide-down">
                 <div className="w-full space-y-0.5 border-t border-gray-100 dark:border-trueGray-800 pt-3">
+                  <div className="flex items-center gap-2 px-1 pb-3 sm:hidden">
+                    {languages.map((l) => (
+                      <button
+                        key={l}
+                        onClick={() => setLang(l)}
+                        className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 ${
+                          lang === l
+                            ? "bg-italia-50 dark:bg-italia-900/30 text-italia-700 dark:text-italia-300"
+                            : "text-gray-500 dark:text-gray-400"
+                        }`}
+                        aria-pressed={lang === l}
+                        aria-label={`Switch to ${l}`}
+                      >
+                        {l}
+                      </button>
+                    ))}
+                  </div>
                   {mainNav.map((item) =>
                     "children" in item ? (
                       <div key={item.name}>

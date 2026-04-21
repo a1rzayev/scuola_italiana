@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { useLanguage } from "@/context/LanguageContext";
-import heroImg from "../../public/img/hero.png";
+import { REGISTRATION_FORM_URL } from "@/lib/registrationForm";
+import heroImg from "../../public/img/hero.jpg";
 
 function TaglineText({ text }: { text: string }) {
   const match = text.match(/Lingua[^•\n]*(Italiana|italiane)/i);
@@ -35,7 +36,7 @@ export const Hero = () => {
               {t.hero.description}
             </p>
 
-            <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:items-center animation-delay-200 animate-fade-in-up">
+            <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center animation-delay-200 animate-fade-in-up">
               <Link
                 href="/services/course"
                 className="group inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-italia-600 rounded-xl hover:bg-italia-700 dark:bg-italia-500 dark:hover:bg-italia-600 transition-all duration-200 shadow-sm hover:shadow-md"
@@ -50,6 +51,17 @@ export const Hero = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
+              <a
+                href={REGISTRATION_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-6 py-3.5 text-base font-semibold text-italia-700 dark:text-italia-300 bg-white dark:bg-trueGray-800 border-2 border-italia-600 dark:border-italia-500 rounded-xl hover:bg-italia-50 dark:hover:bg-italia-900/30 transition-colors duration-200"
+              >
+                {t.hero.registrationForm}
+                <svg className="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
               <Link
                 href="/contacts"
                 className="inline-flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:text-italia-600 dark:hover:text-italia-400 font-medium transition-colors duration-200"
@@ -74,7 +86,7 @@ export const Hero = () => {
             src={heroImg}
             width={580}
             height={580}
-            className="object-cover w-full max-w-sm lg:max-w-none rounded-2xl"
+            className="object-cover w-[70%] max-w-sm lg:max-w-[70%] rounded-2xl mx-auto"
             alt="Scuola Italiana Baku — Italian language school and café in Baku"
             loading="eager"
             placeholder="blur"

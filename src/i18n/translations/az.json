@@ -7,12 +7,14 @@
     "course": "Kurslar",
     "linguaItaliana": "İtalyan Dili",
     "culturaItaliana": "İtalyan Mədəniyyəti",
-    "contacts": "Əlaqə"
+    "contacts": "Əlaqə",
+    "gallery": "Qalereya"
   },
   "hero": {
     "title": "Bakıda İtalyan Dilini Öyrən",
     "description": "Scuola Italiana Baku bütün səviyyələr üçün İtalyan dili kursları, orijinal İtalyan kafesi və mədəni tədbirlər təklif edir. İtaliyanın dili və mədəniyyətini Azərbaycanda kəşf edin.",
     "viewCourses": "Kurslara Bax",
+    "registrationForm": "Kurs üçün sorğu formu",
     "contactUs": "Bizimlə Əlaqə",
     "tagline": "Kurslar • Kafe • İtalyan Dili & Mədəniyyəti Bakıda"
   },
@@ -33,7 +35,10 @@
     "linguaCultura": "Dil & Mədəniyyət",
     "linguaCulturaDesc": "İtalyan dili və mədəniyyətini kəşf et — qrammatika, lüğət, sənət, tarix və ənənələr.",
     "linguaItaliana": "İtalyan Dili",
-    "culturaItaliana": "İtalyan Mədəniyyəti"
+    "culturaItaliana": "İtalyan Mədəniyyəti",
+    "galleryTitle": "Qalereya",
+    "galleryDesc": "Scuola Italiana Bakudan həyata baxış — kurslar, kafe və tədbirlər.",
+    "viewGallery": "Bütün şəkillərə bax →"
   },
   "about": {
     "preTitle": "Haqqımızda",
@@ -54,7 +59,10 @@
     "openingHours": "İş saatları",
     "openingHoursDetail": "Məktəb & Kafe: B.e.–Cümə 9:00–19:00, Şənbə 10:00–14:00",
     "closedSundays": "Bazar günləri və dövlət bayramları bağlıdır.",
-    "social": "Sosial Şəbəkə"
+    "social": "Sosial Şəbəkə",
+    "registrationTitle": "İtalyan dili kursu sorğu formu",
+    "registrationDesc": "Məqsədiniz, səviyyəniz, qrafikiniz və formatınız haqqında məlumat verin — sizə uyğun təklif hazırlayaq. Form Google Forms-da açılır.",
+    "registrationButton": "Formu aç"
   },
   "cultura": {
     "preTitle": "Mədəniyyət",
@@ -123,13 +131,31 @@
     "examCeli": "CELI — Perucia Yabancılar Üçün Universiteti",
     "examPlida": "PLIDA — Dante Alighieri Cəmiyyəti",
     "ctaTitle": "Başlamağa hazırsınız?",
-    "ctaDesc": "Səviyyənizi və hədəflərinizi bizə bildirin — sizin üçün ən uyğun kursu birlikdə tapacağıq.",
-    "ctaButton": "Bizimlə Əlaqə"
+    "ctaDesc": "Kurs sorğu formunu doldurun və ya bizimlə əlaqə saxlayın — sizə uyğun səviyyə və kursu tapmağa kömək edəcəyik.",
+    "ctaButton": "Bizimlə əlaqə",
+    "ctaRegisterButton": "Sorğu formunu aç"
+  },
+  "gallery": {
+    "preTitle": "Qalereya",
+    "title": "Foto Qalereyası",
+    "subtitle": "Scuola Italiana Bakudan həyata baxış — kurslar, kafe, tədbirlər və daha çox.",
+    "all": "Hamısı",
+    "courses": "Kurslar",
+    "cafe": "Kafe",
+    "events": "Tədbirlər",
+    "school": "Məktəb",
+    "close": "Bağla",
+    "previous": "Əvvəlki şəkil",
+    "next": "Növbəti şəkil",
+    "comingSoon": "Şəkillər tezliklə əlavə ediləcək",
+    "comingSoonDesc": "Şəkillər hazırlanır — tezliklə yoxlayın."
   },
   "cta": {
     "title": "Bakıda İtalyan dilini öyrənməyə hazırsınız?",
-    "desc": "Kurslarımıza qoşulun və ya kafemizə baş çəkin. Ətraflı məlumat üçün bizimlə əlaqə saxlayın.",
-    "button": "Bizimlə Əlaqə"
+    "desc": "Kurslarımıza qoşulun və ya kafemizə baş çəkin. Sorğu formu ilə qeydiyyatdan keçin və ya ətraflı məlumat üçün bizimlə əlaqə saxlayın.",
+    "button": "Bizimlə Əlaqə",
+    "registerButton": "Kurs sorğu formu",
+    "contactButton": "Bizimlə əlaqə"
   },
   "faq": {
     "q1": "Hansı səviyyələri təklif edirsiniz?",
@@ -141,7 +167,7 @@
     "q4": "Fərdi dərslər var?",
     "a4": "Bəli, həm qrup kursları, həm də fərdi birdən-bir dərslər var. Fərdi dərslər sizin imkanlarınıza uyğun çevik şəkildə planlaşdırıla bilər.",
     "q5": "Necə qeydiyyatdan keçə bilərəm?",
-    "a5": "Instagram, Telegram, WhatsApp vasitəsilə bizimlə əlaqə saxlaya və ya Əlaqə səhifəmizə baş çəkə bilərsiniz. Səviyyəniz və hədəfləriniz üçün ən uyğun kursu tapaqda kömək edəcəyik."
+    "a5": "Əlaqə səhifəsindəki Google Forms sorğu formunu doldurun, İnstagramda yazın və ya Əlaqə bölməsindəki e-poçtdan istifadə edin. Səviyyəniz və hədəfləriniz üçün ən uyğun kursu tapmaqda kömək edəcəyik."
   },
   "footer": {
     "description": "Bütün səviyyələr üçün İtalyan dili kursları, orijinal İtalyan kafesi və Bakıda mədəni tədbirlər.",

@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { useLanguage } from "@/context/LanguageContext";
+import servicesImg from "../../../public/img/pages/services.jpg";
+import courseImg from "../../../public/img/pages/course.jpg";
 
 export default function ServicesPage() {
   const { t } = useLanguage();
@@ -13,6 +16,22 @@ export default function ServicesPage() {
       </SectionTitle>
 
       <Container className="pb-16">
+        <div className="grid gap-5 mt-4 md:grid-cols-2">
+          <div className="overflow-hidden rounded-2xl border border-gray-100 dark:border-trueGray-700">
+            <Image
+              src={servicesImg}
+              alt="Italian language courses"
+              className="w-full h-56 object-contain bg-gray-100 dark:bg-trueGray-800"
+            />
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-gray-100 dark:border-trueGray-700">
+            <Image
+              src={courseImg}
+              alt="Italian cafe and cultural activities"
+              className="w-full h-56 object-contain bg-gray-100 dark:bg-trueGray-800"
+            />
+          </div>
+        </div>
         <div className="grid gap-5 mt-8 md:grid-cols-2">
           <Link
             href="/services/cafe"

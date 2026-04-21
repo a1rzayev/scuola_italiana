@@ -5,6 +5,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { searchIndex } from "@/lib/searchIndex";
 
+function isExternalHref(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
+
 export function SearchBar() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<typeof searchIndex>([]);
@@ -51,7 +55,12 @@ export function SearchBar() {
         setFocusedIndex((i) => (i > 0 ? i - 1 : results.length - 1));
       } else if (e.key === "Enter" && focusedIndex >= 0 && results[focusedIndex]) {
         e.preventDefault();
-        router.push(results[focusedIndex].href);
+        const href = results[focusedIndex].href;
+        if (isExternalHref(href)) {
+          window.location.assign(href);
+        } else {
+          router.push(href);
+        }
         setIsOpen(false);
         setQuery("");
       } else if (e.key === "Escape") {
@@ -85,7 +94,7 @@ export function SearchBar() {
             setIsOpen(true);
           }}
           onFocus={() => query && setIsOpen(true)}
-          className="w-36 sm:w-44 pl-8 pr-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-gray-50 dark:bg-trueGray-800 dark:border-trueGray-700 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-italia-500 focus:border-transparent transition-all duration-200"
+          className="w-28 sm:w-44 pl-8 pr-2 sm:pr-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-gray-50 dark:bg-trueGray-800 dark:border-trueGray-700 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-italia-500 focus:border-transparent transition-all duration-200"
           aria-label="Search within site"
           aria-autocomplete="list"
           aria-expanded={isOpen && (results.length > 0 || query.trim().length > 0)}
@@ -94,37 +103,54 @@ export function SearchBar() {
 
       {isOpen && results.length > 0 && (
         <ul
-          className="absolute top-full right-0 mt-1.5 w-72 py-1.5 bg-white dark:bg-trueGray-800 border border-gray-100 dark:border-trueGray-700 rounded-xl shadow-card-hover z-50 max-h-72 overflow-auto animate-slide-down"
+          className="absolute top-full right-0 mt-1.5 w-[min(18rem,calc(100vw-1rem))] py-1.5 bg-white dark:bg-trueGray-800 border border-gray-100 dark:border-trueGray-700 rounded-xl shadow-card-hover z-50 max-h-72 overflow-auto animate-slide-down"
           role="listbox"
         >
-          {results.map((item, index) => (
-            <li key={item.href} role="option" aria-selected={index === focusedIndex}>
-              <Link
-                href={item.href}
-                onClick={() => {
-                  setIsOpen(false);
-                  setQuery("");
-                }}
-                className={`block px-4 py-2.5 transition-colors duration-150 ${
-                  index === focusedIndex
-                    ? "bg-italia-50 dark:bg-italia-900/30"
-                    : "hover:bg-gray-50 dark:hover:bg-trueGray-700"
-                }`}
-              >
-                <span className="font-medium text-sm text-gray-900 dark:text-white">
-                  {item.title}
-                </span>
-                <span className="block text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
-                  {item.description}
-                </span>
-              </Link>
-            </li>
-          ))}
+          {results.map((item, index) => {
+            const rowClass = `block px-4 py-2.5 transition-colors duration-150 ${
+              index === focusedIndex
+                ? "bg-italia-50 dark:bg-italia-900/30"
+                : "hover:bg-gray-50 dark:hover:bg-trueGray-700"
+            }`;
+            const close = () => {
+              setIsOpen(false);
+              setQuery("");
+            };
+            return (
+              <li key={item.href} role="option" aria-selected={index === focusedIndex}>
+                {isExternalHref(item.href) ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={close}
+                    className={rowClass}
+                  >
+                    <span className="font-medium text-sm text-gray-900 dark:text-white">
+                      {item.title}
+                    </span>
+                    <span className="block text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
+                      {item.description}
+                    </span>
+                  </a>
+                ) : (
+                  <Link href={item.href} onClick={close} className={rowClass}>
+                    <span className="font-medium text-sm text-gray-900 dark:text-white">
+                      {item.title}
+                    </span>
+                    <span className="block text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
+                      {item.description}
+                    </span>
+                  </Link>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
 
       {isOpen && query.trim() && results.length === 0 && (
-        <div className="absolute top-full right-0 mt-1.5 w-64 py-4 px-4 bg-white dark:bg-trueGray-800 border border-gray-100 dark:border-trueGray-700 rounded-xl shadow-card-hover z-50 text-center text-sm text-gray-500 dark:text-gray-400 animate-slide-down">
+        <div className="absolute top-full right-0 mt-1.5 w-[min(16rem,calc(100vw-1rem))] py-4 px-4 bg-white dark:bg-trueGray-800 border border-gray-100 dark:border-trueGray-700 rounded-xl shadow-card-hover z-50 text-center text-sm text-gray-500 dark:text-gray-400 animate-slide-down">
           No results for &quot;{query}&quot;
         </div>
       )}
