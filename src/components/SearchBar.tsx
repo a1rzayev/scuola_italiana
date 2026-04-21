@@ -97,7 +97,6 @@ export function SearchBar() {
           className="w-28 sm:w-44 pl-8 pr-2 sm:pr-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-gray-50 dark:bg-trueGray-800 dark:border-trueGray-700 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-italia-500 focus:border-transparent transition-all duration-200"
           aria-label="Search within site"
           aria-autocomplete="list"
-          aria-expanded={isOpen && (results.length > 0 || query.trim().length > 0)}
         />
       </div>
 
