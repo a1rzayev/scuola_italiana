@@ -73,7 +73,7 @@ export function Footer() {
             {t.footer.copyright.replace("{year}", String(year))}
           </p>
           <p>
-            Created by{" "}
+            {t.footer.createdBy}{" "}
             <a
               href="https://auxiodev.com"
               target="_blank"

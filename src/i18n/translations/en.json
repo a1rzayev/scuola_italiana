@@ -172,7 +172,8 @@
   "footer": {
     "description": "Italian language courses for all levels, an authentic Italian café, and cultural events in Baku, Azerbaijan.",
     "followUs": "Follow us",
-    "copyright": "Copyright © {year} Scuola Italiana Baku."
+    "copyright": "Copyright © {year} Scuola Italiana Baku.",
+    "createdBy": "Created by"
   },
   "benefits": {
     "oneTitle": "Why learn Italian with us?",
@@ -191,5 +192,25 @@
     "eventsDesc": "Film screenings, cooking sessions, art talks, and Italian holiday celebrations.",
     "lessonsTitle": "Group & private lessons",
     "lessonsDesc": "Flexible formats to fit your schedule — small groups or one-on-one with a teacher."
+  },
+  "ui": {
+    "searchPlaceholder": "Search…",
+    "searchNoResults": "No results for",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "toggleMenu": "Toggle menu",
+    "switchLang": "Switch to",
+    "createdBy": "Created by"
+  },
+  "search": {
+    "registrationDesc": "Italian course registration form",
+    "homeDesc": "Italian courses, café & culture in Baku",
+    "aboutDesc": "About our school and mission",
+    "servicesDesc": "Courses and café overview",
+    "cafeDesc": "Authentic Italian café in Baku",
+    "coursesDesc": "Italian language courses A1–C2",
+    "linguaDesc": "About the Italian language",
+    "culturaDesc": "Italian culture, art & events",
+    "contactsDesc": "Address, email, opening hours"
   }
 }

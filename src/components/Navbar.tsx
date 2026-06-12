@@ -102,29 +102,28 @@ export const Navbar = () => {
 
         {/* Right controls */}
         <div className="flex items-center gap-1.5 ml-auto lg:ml-0 lg:order-2">
-          {/* Language switcher — segmented control with sliding indicator */}
-          <div className="hidden sm:flex items-center relative rounded-lg bg-gray-100 dark:bg-trueGray-800 p-0.5">
-            {/* Sliding indicator */}
+          {/* Language switcher — fixed-width buttons with spring-animated pill */}
+          <div className="hidden sm:flex items-center relative rounded-xl bg-gray-100 dark:bg-trueGray-800 p-1">
+            {/* Spring-animated sliding pill */}
             <span
-              className="absolute top-0.5 bottom-0.5 rounded-md bg-italia-500 transition-transform duration-200 pointer-events-none"
-              style={{
-                width: `calc(${100 / languages.length}% - 2px)`,
-                transform: `translateX(calc(${langIndex * 100}% + ${langIndex * 2}px))`,
-              }}
               aria-hidden="true"
+              className="absolute top-1 left-1 h-[calc(100%-8px)] w-9 rounded-lg bg-italia-500 shadow-sm pointer-events-none"
+              style={{
+                transform: `translateX(${langIndex * 36}px)`,
+                transition: "transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+              }}
             />
-            {languages.map((l, i) => (
+            {languages.map((l) => (
               <button
                 key={l}
                 onClick={() => setLang(l)}
-                className={`relative z-10 px-2.5 py-1 text-xs font-semibold rounded-md transition-colors duration-200 ${
+                className={`relative z-10 w-9 py-1.5 text-xs font-bold rounded-lg text-center leading-none select-none transition-colors duration-200 ${
                   lang === l
                     ? "text-white"
                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 }`}
-                style={{ minWidth: "2.25rem" }}
                 aria-pressed={lang === l}
-                aria-label={`Switch to ${l}`}
+                aria-label={`${t.ui.switchLang} ${l}`}
               >
                 {l}
               </button>
@@ -139,7 +138,7 @@ export const Navbar = () => {
           {({ open }) => (
             <>
               <Disclosure.Button
-                aria-label="Toggle Menu"
+                aria-label={t.ui.toggleMenu}
                 className="ml-2 px-2 py-1.5 text-gray-500 rounded-md lg:hidden hover:text-italia-500 hover:bg-gray-50 focus:text-italia-500 focus:bg-italia-50 dark:text-gray-300 dark:hover:bg-trueGray-800 dark:focus:bg-trueGray-700 transition-colors duration-200"
               >
                 <svg
@@ -173,22 +172,32 @@ export const Navbar = () => {
               >
                 <Disclosure.Panel className="w-full mt-2 pb-3 lg:hidden">
                   <div className="w-full space-y-0.5 border-t border-gray-100 dark:border-trueGray-800 pt-3">
-                    <div className="flex items-center gap-2 px-1 pb-3 sm:hidden">
-                      {languages.map((l) => (
-                        <button
-                          key={l}
-                          onClick={() => setLang(l)}
-                          className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 ${
-                            lang === l
-                              ? "bg-italia-500 text-white"
-                              : "text-gray-500 dark:text-gray-400"
-                          }`}
-                          aria-pressed={lang === l}
-                          aria-label={`Switch to ${l}`}
-                        >
-                          {l}
-                        </button>
-                      ))}
+                    <div className="flex items-center px-1 pb-3 sm:hidden">
+                      <div className="relative flex items-center rounded-xl bg-gray-100 dark:bg-trueGray-800 p-1">
+                        <span
+                          aria-hidden="true"
+                          className="absolute top-1 left-1 h-[calc(100%-8px)] w-9 rounded-lg bg-italia-500 shadow-sm pointer-events-none"
+                          style={{
+                            transform: `translateX(${langIndex * 36}px)`,
+                            transition: "transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+                          }}
+                        />
+                        {languages.map((l) => (
+                          <button
+                            key={l}
+                            onClick={() => setLang(l)}
+                            className={`relative z-10 w-9 py-1.5 text-xs font-bold rounded-lg text-center leading-none select-none transition-colors duration-200 ${
+                              lang === l
+                                ? "text-white"
+                                : "text-gray-500 dark:text-gray-400"
+                            }`}
+                            aria-pressed={lang === l}
+                            aria-label={`${t.ui.switchLang} ${l}`}
+                          >
+                            {l}
+                          </button>
+                        ))}
+                      </div>
                     </div>
                     {mainNav.map((item) =>
                       "children" in item ? (

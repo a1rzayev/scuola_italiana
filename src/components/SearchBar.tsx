@@ -1,18 +1,22 @@
 "use client";
 
-import { useState, useRef, useEffect, Fragment } from "react";
+import { useState, useRef, useEffect, useMemo, Fragment } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Transition } from "@headlessui/react";
-import { searchIndex } from "@/lib/searchIndex";
+import { buildSearchIndex } from "@/lib/searchIndex";
+import { useLanguage } from "@/context/LanguageContext";
 
 function isExternalHref(href: string) {
   return href.startsWith("http://") || href.startsWith("https://");
 }
 
 export function SearchBar() {
+  const { t } = useLanguage();
+  const searchIndex = useMemo(() => buildSearchIndex(t), [t]);
+
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<typeof searchIndex>([]);
+  const [results, setResults] = useState<ReturnType<typeof buildSearchIndex>>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -33,7 +37,7 @@ export function SearchBar() {
     );
     setResults(filtered.slice(0, 6));
     setFocusedIndex(-1);
-  }, [query]);
+  }, [query, searchIndex]);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -73,39 +77,32 @@ export function SearchBar() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, results, focusedIndex, router]);
 
-  const showDropdown = isOpen && (results.length > 0 || query.trim().length > 0);
+  const showResults = isOpen && results.length > 0;
+  const showEmpty = isOpen && query.trim().length > 0 && results.length === 0;
 
   return (
     <div ref={wrapperRef} className="relative">
       <div className="relative">
         <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 pointer-events-none">
           <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </span>
         <input
           type="search"
-          placeholder="Search…"
+          placeholder={t.ui.searchPlaceholder}
           value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-            setIsOpen(true);
-          }}
+          onChange={(e) => { setQuery(e.target.value); setIsOpen(true); }}
           onFocus={() => query && setIsOpen(true)}
           className="w-28 sm:w-44 pl-8 pr-2 sm:pr-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-gray-50 dark:bg-trueGray-800 dark:border-trueGray-700 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-italia-500 focus:border-transparent focus:shadow-md transition-all duration-200"
-          aria-label="Search within site"
+          aria-label={t.ui.searchPlaceholder}
           aria-autocomplete="list"
         />
       </div>
 
       <Transition
         as={Fragment}
-        show={showDropdown && results.length > 0}
+        show={showResults}
         enter="transition duration-200 ease-[var(--ease-spring)]"
         enterFrom="opacity-0 scale-95 -translate-y-2"
         enterTo="opacity-100 scale-100 translate-y-0"
@@ -124,18 +121,11 @@ export function SearchBar() {
                 ? "bg-italia-500/5 dark:bg-italia-900/30 ring-1 ring-inset ring-italia-500/30"
                 : "hover:bg-italia-500/5 dark:hover:bg-trueGray-700"
             }`;
-            const close = () => {
-              setIsOpen(false);
-              setQuery("");
-            };
+            const close = () => { setIsOpen(false); setQuery(""); };
             const content = (
               <>
-                <span className="font-medium text-sm text-gray-900 dark:text-white pr-5">
-                  {item.title}
-                </span>
-                <span className="block text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
-                  {item.description}
-                </span>
+                <span className="font-medium text-sm text-gray-900 dark:text-white pr-5">{item.title}</span>
+                <span className="block text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">{item.description}</span>
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-300 dark:text-gray-600 transition-transform duration-150 group-hover:translate-x-0.5 group-hover:text-italia-400">
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -146,13 +136,9 @@ export function SearchBar() {
             return (
               <li key={item.href} role="option" aria-selected={isFocused}>
                 {isExternalHref(item.href) ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" onClick={close} className={rowBase}>
-                    {content}
-                  </a>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" onClick={close} className={rowBase}>{content}</a>
                 ) : (
-                  <Link href={item.href} onClick={close} className={rowBase}>
-                    {content}
-                  </Link>
+                  <Link href={item.href} onClick={close} className={rowBase}>{content}</Link>
                 )}
               </li>
             );
@@ -162,7 +148,7 @@ export function SearchBar() {
 
       <Transition
         as={Fragment}
-        show={isOpen && query.trim().length > 0 && results.length === 0}
+        show={showEmpty}
         enter="transition duration-200 ease-[var(--ease-spring)]"
         enterFrom="opacity-0 scale-95 -translate-y-2"
         enterTo="opacity-100 scale-100 translate-y-0"
@@ -175,7 +161,7 @@ export function SearchBar() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-            No results for &quot;{query}&quot;
+            {t.ui.searchNoResults} &quot;{query}&quot;
           </p>
         </div>
       </Transition>

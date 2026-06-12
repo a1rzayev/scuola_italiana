@@ -1,10 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/context/LanguageContext";
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const { t } = useLanguage();
 
   useEffect(() => setMounted(true), []);
 
@@ -18,7 +20,7 @@ const ThemeChanger = () => {
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-trueGray-700 hover:bg-gray-200 dark:hover:bg-trueGray-600 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200 p-1.5"
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={isDark ? t.ui.switchToLight : t.ui.switchToDark}
     >
       <span className="relative w-5 h-5 overflow-hidden flex items-center justify-center">
         {/* Sun icon */}

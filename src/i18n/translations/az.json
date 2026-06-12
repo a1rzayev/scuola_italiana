@@ -97,7 +97,7 @@
     "subtitle": "Hər fincan içindəki İtaliya dadı — orijinal espresso, pestri və söhbət.",
     "p1": "Kafemiz Scuola Italiana Bakının ürəyidir. Burada orijinal İtalyan qəhvəsindən — espresso, kapuçino, makiato — və təzə bişmiş İtalyan pestrindən zövq alabilərsiniz. Dərslər arasında rahatlamaq və ya qeyri-rəsmi mühitdə İtalyanca məşq etmək üçün mükəmməl yerdir.",
     "p2": "Bakıda digər tələbələr və ana dilli İtalyan danışanlarla görüşə biləcəyiniz söhbət masaları və mədəni tədbirlər keçiririk. Başlanğıc və ya qabaqcıl səviyyədə olsanız da, həmişə xoş gəlmisiniz.",
-    "p3": "İş saatları və menyu təfərrüatları Əlaqə səhifəmizdə mövcuddur. Vi aspettiamo!"
+    "p3": "İş saatları və menyu təfərrüatları Əlaqə səhifəmizdə mövcuddur. Sizi gözləyirik!"
   },
   "course": {
     "preTitle": "Kurslar",
@@ -127,8 +127,8 @@
     "privateDesc": "Sizin tempinizə, hədəflərinizə və qrafikinizə tam uyğunlaşdırılmış birdən-bir seanslar.",
     "examTitle": "Sertifikat Hazırlığı",
     "examDesc": "Beynəlxalq səviyyədə tanınan İtalyan dili sertifikatları — CILS, CELI və PLIDA üçün strukturlu hazırlıq kursları.",
-    "examCils": "CILS — Siena Yabancılar Üçün Universiteti",
-    "examCeli": "CELI — Perucia Yabancılar Üçün Universiteti",
+    "examCils": "CILS — Siena Xaricilər üçün Universiteti",
+    "examCeli": "CELI — Perucia Xaricilər üçün Universiteti",
     "examPlida": "PLIDA — Dante Alighieri Cəmiyyəti",
     "ctaTitle": "Başlamağa hazırsınız?",
     "ctaDesc": "Kurs sorğu formunu doldurun və ya bizimlə əlaqə saxlayın — sizə uyğun səviyyə və kursu tapmağa kömək edəcəyik.",
@@ -172,7 +172,8 @@
   "footer": {
     "description": "Bütün səviyyələr üçün İtalyan dili kursları, orijinal İtalyan kafesi və Bakıda mədəni tədbirlər.",
     "followUs": "Bizi izləyin",
-    "copyright": "© {year} Scuola Italiana Baku. Bütün hüquqlar qorunur."
+    "copyright": "© {year} Scuola Italiana Baku. Bütün hüquqlar qorunur.",
+    "createdBy": "Hazırladı"
   },
   "benefits": {
     "oneTitle": "Niyə bizimlə İtalyan dilini öyrənməlisiniz?",
@@ -191,5 +192,25 @@
     "eventsDesc": "Film göstərişləri, kulinariya dərsləri, sənət haqqında söhbətlər və İtalyan bayram tədbirləri.",
     "lessonsTitle": "Qrup & fərdi dərslər",
     "lessonsDesc": "Cədvəlinizə uyğun çevik formatlar — kiçik qruplar və ya müəllimlə birdən-bir."
+  },
+  "ui": {
+    "searchPlaceholder": "Axtar…",
+    "searchNoResults": "Nəticə tapılmadı:",
+    "switchToLight": "İşıq rejiminə keç",
+    "switchToDark": "Qaranlıq rejiminə keç",
+    "toggleMenu": "Menyunu aç/bağla",
+    "switchLang": "Dil seçin",
+    "createdBy": "Hazırladı"
+  },
+  "search": {
+    "registrationDesc": "İtalyan dili kursu qeydiyyat formu",
+    "homeDesc": "Bakıda İtalyan kursları, kafe & mədəniyyət",
+    "aboutDesc": "Məktəbimiz və missiyamız haqqında",
+    "servicesDesc": "Kurslar və kafeyə ümumi baxış",
+    "cafeDesc": "Bakıda orijinal İtalyan kafesi",
+    "coursesDesc": "İtalyan dili kursları A1–C2",
+    "linguaDesc": "İtalyan dili haqqında",
+    "culturaDesc": "İtalyan mədəniyyəti, sənət & tədbirlər",
+    "contactsDesc": "Ünvan, e-poçt, iş saatları"
   }
 }

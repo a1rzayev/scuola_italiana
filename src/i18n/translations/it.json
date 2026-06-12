@@ -29,7 +29,7 @@
     "italianCoursesDesc": "Dal principiante all'avanzato — da A1 a C2. Lezioni in gruppo e private con insegnanti madrelingua italiani.",
     "viewCourses": "Vedi i corsi →",
     "ourCafe": "Il Nostro Caffè",
-    "ourCafeDesc": "Autentico espresso, cappuccino, pastries italiane e un ambiente accogliente per praticare l'italiano.",
+    "ourCafeDesc": "Autentico espresso, cappuccino, pasticcini italiani e un ambiente accogliente per praticare l'italiano.",
     "visitCafe": "Visita il caffè →",
     "explore": "Esplora",
     "linguaCultura": "Lingua & Cultura",
@@ -172,7 +172,8 @@
   "footer": {
     "description": "Corsi di lingua italiana per tutti i livelli, un autentico caffè italiano ed eventi culturali a Baku, Azerbaigian.",
     "followUs": "Seguici",
-    "copyright": "© {year} Scuola Italiana Baku. Tutti i diritti riservati."
+    "copyright": "© {year} Scuola Italiana Baku. Tutti i diritti riservati.",
+    "createdBy": "Creato da"
   },
   "benefits": {
     "oneTitle": "Perché imparare l'italiano con noi?",
@@ -191,5 +192,25 @@
     "eventsDesc": "Proiezioni di film, sessioni di cucina, conferenze sull'arte e celebrazioni di feste italiane.",
     "lessonsTitle": "Lezioni in gruppo & private",
     "lessonsDesc": "Formati flessibili per adattarsi al tuo programma — piccoli gruppi o one-to-one con un insegnante."
+  },
+  "ui": {
+    "searchPlaceholder": "Cerca…",
+    "searchNoResults": "Nessun risultato per",
+    "switchToLight": "Passa alla modalità chiara",
+    "switchToDark": "Passa alla modalità scura",
+    "toggleMenu": "Apri/chiudi menu",
+    "switchLang": "Cambia a",
+    "createdBy": "Creato da"
+  },
+  "search": {
+    "registrationDesc": "Modulo di iscrizione ai corsi di italiano",
+    "homeDesc": "Corsi, caffè e cultura italiana a Baku",
+    "aboutDesc": "Chi siamo e la nostra missione",
+    "servicesDesc": "Panoramica corsi e caffè",
+    "cafeDesc": "Autentico caffè italiano a Baku",
+    "coursesDesc": "Corsi di italiano A1–C2",
+    "linguaDesc": "La lingua italiana",
+    "culturaDesc": "Cultura italiana, arte ed eventi",
+    "contactsDesc": "Indirizzo, email, orari"
   }
 }
