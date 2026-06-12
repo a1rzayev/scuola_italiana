@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
+import { RevealOnScroll } from "@/components/RevealOnScroll";
 
 interface BenefitsProps {
   imgPos?: "left" | "right";
@@ -18,6 +20,7 @@ interface BenefitsProps {
 
 export const Benefits = (props: Readonly<BenefitsProps>) => {
   const { data } = props;
+  const bulletDir = props.imgPos === "right" ? "right" : "left";
   return (
     <Container className="flex flex-wrap py-8 lg:gap-12 lg:flex-nowrap items-center">
       {/* Image column */}
@@ -26,15 +29,19 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
           props.imgPos === "right" ? "lg:order-1" : ""
         }`}
       >
-        <Image
-          src={data.image}
-          width={500}
-          height={500}
-          alt={data.title}
-          className="object-cover rounded-2xl w-full max-w-md"
-          placeholder="blur"
-          blurDataURL={data.image.src}
-        />
+        <div className="relative overflow-hidden rounded-2xl w-full max-w-md group">
+          <Image
+            src={data.image}
+            width={500}
+            height={500}
+            alt={data.title}
+            className="object-cover w-full transition-transform duration-500 ease-[var(--ease-smooth)] group-hover:scale-[1.03]"
+            placeholder="blur"
+            blurDataURL={data.image.src}
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-italia-900/40 to-transparent pointer-events-none" />
+        </div>
       </div>
 
       {/* Text column */}
@@ -54,9 +61,11 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
 
           <div className="mt-6 space-y-6">
             {data.bullets.map((item, index) => (
-              <Benefit key={index} title={item.title} icon={item.icon}>
-                {item.desc}
-              </Benefit>
+              <RevealOnScroll key={index} direction={bulletDir} delay={(index % 4) as 0 | 1 | 2 | 3}>
+                <Benefit title={item.title} icon={item.icon}>
+                  {item.desc}
+                </Benefit>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
@@ -67,10 +76,10 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
 
 function Benefit(props: any) {
   return (
-    <div className="flex items-start gap-4 group">
-      <div className="flex items-center justify-center flex-shrink-0 mt-0.5 bg-italia-500 dark:bg-italia-600 rounded-xl w-10 h-10 shadow-sm transition-transform duration-200 group-hover:scale-105">
+    <div className="flex items-start gap-4 group cursor-default">
+      <div className="flex items-center justify-center flex-shrink-0 mt-0.5 bg-italia-500/10 dark:bg-italia-600/20 rounded-full p-2 w-10 h-10 transition-all duration-200 group-hover:bg-italia-500 group-hover:scale-105">
         {React.cloneElement(props.icon, {
-          className: "w-5 h-5 text-white",
+          className: "w-5 h-5 text-italia-600 dark:text-italia-400 transition-colors duration-200 group-hover:text-white",
         })}
       </div>
       <div>

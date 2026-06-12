@@ -4,6 +4,7 @@ import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Benefits } from "@/components/Benefits";
+import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { useLanguage } from "@/context/LanguageContext";
 import {
   FaceSmileIcon,
@@ -85,50 +86,54 @@ export default function Home() {
 
       <Container className="pb-4">
         <div className="grid gap-5 mt-8 md:grid-cols-2">
-          <Link
-            href="/services/course"
-            className="group block p-7 transition-all duration-300 rounded-2xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700 hover:border-italia-200 dark:hover:border-italia-800 hover:shadow-card-hover"
-          >
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-              {t.home.italianCourses}
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-              {t.home.italianCoursesDesc}
-            </p>
-            <span className="inline-flex items-center mt-4 gap-1 text-sm font-semibold text-italia-600 dark:text-italia-400 group-hover:gap-2 transition-all duration-200">
-              {t.home.viewCourses}
-              <svg
-                className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </span>
-          </Link>
-          <Link
-            href="/services/cafe"
-            className="group block p-7 transition-all duration-300 rounded-2xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700 hover:border-italia-200 dark:hover:border-italia-800 hover:shadow-card-hover"
-          >
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-              {t.home.ourCafe}
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-              {t.home.ourCafeDesc}
-            </p>
-            <span className="inline-flex items-center mt-4 gap-1 text-sm font-semibold text-italia-600 dark:text-italia-400 group-hover:gap-2 transition-all duration-200">
-              {t.home.visitCafe}
-              <svg
-                className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </span>
-          </Link>
+          <RevealOnScroll delay={1}>
+            <Link
+              href="/services/course"
+              className="group block p-7 transition-all duration-300 rounded-2xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700 hover:border-italia-200 dark:hover:border-italia-800 hover:shadow-card-hover hover:-translate-y-1"
+            >
+              <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+                {t.home.italianCourses}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                {t.home.italianCoursesDesc}
+              </p>
+              <span className="inline-flex items-center mt-4 gap-1 text-sm font-semibold text-italia-600 dark:text-italia-400 group-hover:gap-2 transition-all duration-200">
+                {t.home.viewCourses}
+                <svg
+                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
+          </RevealOnScroll>
+          <RevealOnScroll delay={2}>
+            <Link
+              href="/services/cafe"
+              className="group block p-7 transition-all duration-300 rounded-2xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700 hover:border-italia-200 dark:hover:border-italia-800 hover:shadow-card-hover hover:-translate-y-1"
+            >
+              <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+                {t.home.ourCafe}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                {t.home.ourCafeDesc}
+              </p>
+              <span className="inline-flex items-center mt-4 gap-1 text-sm font-semibold text-italia-600 dark:text-italia-400 group-hover:gap-2 transition-all duration-200">
+                {t.home.visitCafe}
+                <svg
+                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
+          </RevealOnScroll>
         </div>
       </Container>
 
@@ -137,30 +142,31 @@ export default function Home() {
       </SectionTitle>
 
       <Container className="pb-4">
-        <div className="flex flex-wrap justify-center gap-3 mt-8">
-          <Link
-            href="/lingua-italiana"
-            className="group inline-flex items-center gap-2 px-6 py-3 font-semibold text-white rounded-xl bg-italia-600 hover:bg-italia-700 dark:bg-italia-500 dark:hover:bg-italia-600 transition-all duration-200 shadow-sm hover:shadow-md"
-          >
-            {t.home.linguaItaliana}
-            <svg
-              className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        <RevealOnScroll>
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
+            <Link
+              href="/lingua-italiana"
+              className="group inline-flex items-center gap-2 px-6 py-3 font-semibold text-white rounded-xl bg-italia-600 hover:bg-italia-700 dark:bg-italia-500 dark:hover:bg-italia-600 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-          <Link
-            href="/cultura-italiana"
-            className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-italia-700 border-2 border-italia-200 rounded-xl dark:text-italia-400 dark:border-italia-700 hover:bg-italia-50 dark:hover:bg-italia-900/30 hover:border-italia-300 dark:hover:border-italia-600 transition-all duration-200"
-          >
-            {t.home.culturaItaliana}
-          </Link>
-        </div>
+              {t.home.linguaItaliana}
+              <svg
+                className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <Link
+              href="/cultura-italiana"
+              className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-italia-700 border-2 border-italia-200 rounded-xl dark:text-italia-400 dark:border-italia-700 hover:bg-italia-50 dark:hover:bg-italia-900/30 hover:border-italia-300 dark:hover:border-italia-600 transition-all duration-200 hover:-translate-y-0.5"
+            >
+              {t.home.culturaItaliana}
+            </Link>
+          </div>
+        </RevealOnScroll>
       </Container>
-
     </>
   );
 }

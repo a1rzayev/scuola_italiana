@@ -13,9 +13,9 @@ function TaglineText({ text }: { text: string }) {
   return (
     <>
       {text.slice(0, idx)}
-      <span className="text-italia-600 dark:text-italia-400 font-semibold">
+      <mark className="bg-italia-500/15 text-italia-700 dark:text-italia-400 rounded-md px-1 py-0.5 not-italic font-semibold" style={{ boxDecorationBreak: "clone", WebkitBoxDecorationBreak: "clone" }}>
         {match[0]}
-      </span>
+      </mark>
       {text.slice(idx + match[0].length)}
     </>
   );
@@ -25,7 +25,17 @@ export const Hero = () => {
   const { t } = useLanguage();
   return (
     <>
-      <Container className="flex flex-wrap pt-12 pb-8 lg:pt-16 lg:pb-12 lg:flex-nowrap items-center gap-8 lg:gap-12">
+      <Container className="relative flex flex-wrap pt-12 pb-8 lg:pt-16 lg:pb-12 lg:flex-nowrap items-center gap-8 lg:gap-12">
+        {/* Decorative blobs */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-16 -right-16 w-96 h-96 rounded-full bg-italia-500/10 blur-3xl animate-float motion-reduce:animate-none"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-8 -left-16 w-64 h-64 rounded-full bg-italiaRed-500/8 blur-3xl animate-float animation-delay-500 motion-reduce:animate-none"
+        />
+
         {/* Text column */}
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl animate-fade-in-up">
@@ -37,34 +47,45 @@ export const Hero = () => {
             </p>
 
             <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center animation-delay-200 animate-fade-in-up">
-              <Link
-                href="/services/course"
-                className="group inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-italia-600 rounded-xl hover:bg-italia-700 dark:bg-italia-500 dark:hover:bg-italia-600 transition-all duration-200 shadow-sm hover:shadow-md"
-              >
-                {t.hero.viewCourses}
-                <svg
-                  className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              {/* Primary CTA */}
+              <div className="relative group">
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 rounded-xl bg-italia-500/30 scale-100 group-hover:scale-125 group-hover:opacity-0 transition-all duration-500 ease-out motion-reduce:hidden"
+                />
+                <Link
+                  href="/services/course"
+                  className="relative inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-italia-600 rounded-xl hover:bg-italia-700 dark:bg-italia-500 dark:hover:bg-italia-600 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+                  {t.hero.viewCourses}
+                  <svg
+                    className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+
+              {/* Secondary CTA */}
               <a
                 href={REGISTRATION_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-6 py-3.5 text-base font-semibold text-italia-700 dark:text-italia-300 bg-white dark:bg-trueGray-800 border-2 border-italia-600 dark:border-italia-500 rounded-xl hover:bg-italia-50 dark:hover:bg-italia-900/30 transition-colors duration-200"
+                className="inline-flex items-center gap-1.5 px-6 py-3.5 text-base font-semibold text-italia-700 dark:text-italia-300 bg-white dark:bg-trueGray-800 border-2 border-italia-600 dark:border-italia-500 rounded-xl hover:bg-italia-600 hover:text-white dark:hover:bg-italia-500 dark:hover:text-white transition-all duration-200 hover:-translate-y-0.5"
               >
                 {t.hero.registrationForm}
                 <svg className="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
+
+              {/* Tertiary CTA */}
               <Link
                 href="/contacts"
-                className="inline-flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:text-italia-600 dark:hover:text-italia-400 font-medium transition-colors duration-200"
+                className="underline-wipe inline-flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:text-italia-600 dark:hover:text-italia-400 font-medium transition-colors duration-200"
               >
                 {t.hero.contactUs}
                 <svg
@@ -82,15 +103,17 @@ export const Hero = () => {
 
         {/* Image column */}
         <div className="flex items-center justify-center w-full lg:w-1/2 animate-fade-in animation-delay-100">
-          <Image
-            src={heroImg}
-            width={580}
-            height={580}
-            className="object-cover w-[70%] max-w-sm lg:max-w-[70%] rounded-2xl mx-auto"
-            alt="Scuola Italiana Baku — Italian language school and café in Baku"
-            loading="eager"
-            placeholder="blur"
-          />
+          <div className="overflow-hidden rounded-2xl shadow-2xl w-[70%] max-w-sm lg:max-w-[70%] mx-auto transition-transform duration-500 ease-[var(--ease-smooth)] hover:scale-[1.02]">
+            <Image
+              src={heroImg}
+              width={580}
+              height={580}
+              className="object-cover w-full"
+              alt="Scuola Italiana Baku — Italian language school and café in Baku"
+              loading="eager"
+              placeholder="blur"
+            />
+          </div>
         </div>
       </Container>
 

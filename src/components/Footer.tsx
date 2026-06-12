@@ -11,6 +11,9 @@ export function Footer() {
 
   return (
     <footer className="border-t border-gray-100 dark:border-trueGray-800">
+      {/* Gradient top divider */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-italia-500/30 to-transparent" />
+
       <Container>
         <div className="grid grid-cols-1 gap-10 pt-12 pb-10 lg:grid-cols-3">
           {/* Brand column */}
@@ -44,12 +47,14 @@ export function Footer() {
                   href="https://www.instagram.com/scuola_italiana_baku/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-italia-600 dark:hover:text-italia-400 transition-colors duration-200"
+                  className="group inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-white transition-all duration-300"
                 >
-                  <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z" />
-                  </svg>
-                  Instagram
+                  <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 dark:bg-trueGray-800 text-gray-500 dark:text-gray-400 group-hover:bg-gradient-to-br group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-orange-400 group-hover:text-white transition-all duration-300">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z" />
+                    </svg>
+                  </span>
+                  <span className="group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors duration-200">Instagram</span>
                 </a>
               </li>
             </ul>
@@ -58,8 +63,26 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-100 dark:border-trueGray-800 py-6 text-sm text-center text-gray-500 dark:text-gray-400 space-y-1">
-          <p>{t.footer.copyright.replace("{year}", String(year))}</p>
-          <p>Created by <a href="https://azcore.az" target="_blank" rel="noopener noreferrer">AzCore</a></p>
+          <p className="flex items-center justify-center gap-2">
+            {/* Italia flag decoration */}
+            <span className="inline-flex gap-0.5 items-center" aria-hidden="true">
+              <span className="w-1 h-3 inline-block rounded-sm bg-italia-500" />
+              <span className="w-1 h-3 inline-block rounded-sm bg-white border border-gray-200 dark:border-trueGray-600" />
+              <span className="w-1 h-3 inline-block rounded-sm bg-italiaRed-500" />
+            </span>
+            {t.footer.copyright.replace("{year}", String(year))}
+          </p>
+          <p>
+            Created by{" "}
+            <a
+              href="https://auxiodev.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-italia-500 transition-colors duration-200"
+            >
+              AuxioDev
+            </a>
+          </p>
         </div>
       </Container>
     </footer>

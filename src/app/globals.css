@@ -14,12 +14,24 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  :root {
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
   ::selection {
-    @apply bg-italia-100 text-italia-900;
+    @apply bg-italia-200 text-italia-900;
   }
 
   *:focus-visible {
     @apply outline-none ring-2 ring-italia-500 ring-offset-2 dark:ring-offset-trueGray-900;
+  }
+
+  a,
+  button {
+    transition: all 0.2s var(--ease-smooth);
   }
 }
 
@@ -48,6 +60,58 @@
   .animation-delay-400 {
     animation-delay: 400ms;
     animation-fill-mode: both;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+    animation-fill-mode: both;
+  }
+  .animation-delay-700 {
+    animation-delay: 700ms;
+    animation-fill-mode: both;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #009246 0%, #34d399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .dark .glass {
+    background: rgba(23, 23, 23, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .underline-wipe {
+    position: relative;
+    text-decoration: none;
+  }
+  .underline-wipe::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.3s var(--ease-smooth);
+  }
+  .underline-wipe:hover::after {
+    width: 100%;
   }
 }
 

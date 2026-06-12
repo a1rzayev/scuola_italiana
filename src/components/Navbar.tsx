@@ -3,7 +3,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
-import { Disclosure, Menu } from "@headlessui/react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Fragment, useEffect, useState } from "react";
 import { SearchBar } from "./SearchBar";
 import { useLanguage, Language } from "@/context/LanguageContext";
 
@@ -12,6 +13,13 @@ const languages: Language[] = ["AZ", "EN", "IT"];
 export const Navbar = () => {
   const { lang, setLang, t } = useLanguage();
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const mainNav = [
     { name: t.nav.home, href: "/" },
@@ -37,18 +45,26 @@ export const Navbar = () => {
   const linkClass = (href: string) =>
     `inline-block px-3 py-1.5 text-sm font-medium rounded-md transition-colors duration-200 ${
       isActive(href)
-        ? "text-italia-700 dark:text-italia-400 bg-italia-50 dark:bg-italia-900/30"
+        ? "text-italia-700 dark:text-italia-400 bg-italia-500/10 dark:bg-italia-900/30"
         : "text-gray-700 dark:text-gray-200 hover:text-italia-600 dark:hover:text-italia-400 hover:bg-gray-50 dark:hover:bg-trueGray-800"
     }`;
 
+  const langIndex = languages.indexOf(lang);
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md dark:bg-trueGray-900/95 dark:border-trueGray-800">
+    <header
+      className={`sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 dark:bg-trueGray-900/95 dark:border-trueGray-800 transition-all duration-300 ${
+        scrolled
+          ? "shadow-nav backdrop-blur-xl"
+          : "backdrop-blur-md"
+      }`}
+    >
       <nav className="container mx-auto flex flex-wrap items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-0 py-3">
         {/* Brand */}
         <div className="flex items-center gap-2.5">
           <Link
             href="/"
-            className="flex items-center space-x-2 text-xl font-semibold text-italia-600 dark:text-gray-100 hover:text-italia-700 dark:hover:text-white transition-colors duration-200"
+            className="flex items-center space-x-2 text-xl font-semibold text-italia-600 dark:text-gray-100 hover:text-italia-700 dark:hover:text-white transition-all duration-200 hover:scale-105 hover:brightness-110"
           >
             <Image
               src="/img/logo.png"
@@ -86,17 +102,27 @@ export const Navbar = () => {
 
         {/* Right controls */}
         <div className="flex items-center gap-1.5 ml-auto lg:ml-0 lg:order-2">
-          {/* Language switcher — segmented control */}
-          <div className="hidden sm:flex items-center gap-0.5 rounded-lg bg-gray-100 dark:bg-trueGray-800 p-0.5">
-            {languages.map((l) => (
+          {/* Language switcher — segmented control with sliding indicator */}
+          <div className="hidden sm:flex items-center relative rounded-lg bg-gray-100 dark:bg-trueGray-800 p-0.5">
+            {/* Sliding indicator */}
+            <span
+              className="absolute top-0.5 bottom-0.5 rounded-md bg-italia-500 transition-transform duration-200 pointer-events-none"
+              style={{
+                width: `calc(${100 / languages.length}% - 2px)`,
+                transform: `translateX(calc(${langIndex * 100}% + ${langIndex * 2}px))`,
+              }}
+              aria-hidden="true"
+            />
+            {languages.map((l, i) => (
               <button
                 key={l}
                 onClick={() => setLang(l)}
-                className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 ${
+                className={`relative z-10 px-2.5 py-1 text-xs font-semibold rounded-md transition-colors duration-200 ${
                   lang === l
-                    ? "bg-white dark:bg-trueGray-700 text-italia-700 dark:text-italia-300 shadow-sm"
+                    ? "text-white"
                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 }`}
+                style={{ minWidth: "2.25rem" }}
                 aria-pressed={lang === l}
                 aria-label={`Switch to ${l}`}
               >
@@ -136,61 +162,71 @@ export const Navbar = () => {
                 </svg>
               </Disclosure.Button>
 
-              <Disclosure.Panel className="w-full mt-2 pb-3 lg:hidden animate-slide-down">
-                <div className="w-full space-y-0.5 border-t border-gray-100 dark:border-trueGray-800 pt-3">
-                  <div className="flex items-center gap-2 px-1 pb-3 sm:hidden">
-                    {languages.map((l) => (
-                      <button
-                        key={l}
-                        onClick={() => setLang(l)}
-                        className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 ${
-                          lang === l
-                            ? "bg-italia-50 dark:bg-italia-900/30 text-italia-700 dark:text-italia-300"
-                            : "text-gray-500 dark:text-gray-400"
-                        }`}
-                        aria-pressed={lang === l}
-                        aria-label={`Switch to ${l}`}
-                      >
-                        {l}
-                      </button>
-                    ))}
-                  </div>
-                  {mainNav.map((item) =>
-                    "children" in item ? (
-                      <div key={item.name}>
-                        <span className="block px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
+              <Transition
+                as={Fragment}
+                enter="transition duration-200 ease-[var(--ease-smooth)]"
+                enterFrom="opacity-0 -translate-y-2"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition duration-150 ease-[var(--ease-smooth)]"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 -translate-y-2"
+              >
+                <Disclosure.Panel className="w-full mt-2 pb-3 lg:hidden">
+                  <div className="w-full space-y-0.5 border-t border-gray-100 dark:border-trueGray-800 pt-3">
+                    <div className="flex items-center gap-2 px-1 pb-3 sm:hidden">
+                      {languages.map((l) => (
+                        <button
+                          key={l}
+                          onClick={() => setLang(l)}
+                          className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-all duration-200 ${
+                            lang === l
+                              ? "bg-italia-500 text-white"
+                              : "text-gray-500 dark:text-gray-400"
+                          }`}
+                          aria-pressed={lang === l}
+                          aria-label={`Switch to ${l}`}
+                        >
+                          {l}
+                        </button>
+                      ))}
+                    </div>
+                    {mainNav.map((item) =>
+                      "children" in item ? (
+                        <div key={item.name}>
+                          <span className="block px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
+                            {item.name}
+                          </span>
+                          {item.children?.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className={`block w-full px-5 py-2 text-sm rounded-md transition-colors duration-150 ${
+                                isActive(child.href)
+                                  ? "text-italia-700 dark:text-italia-400 bg-italia-500/10 dark:bg-italia-900/30"
+                                  : "text-gray-600 dark:text-gray-300 hover:text-italia-600 hover:bg-gray-50 dark:hover:bg-trueGray-800"
+                              }`}
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      ) : (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={`block w-full px-3 py-2 text-sm rounded-md transition-colors duration-150 ${
+                            isActive(item.href)
+                              ? "text-italia-700 dark:text-italia-400 bg-italia-500/10 dark:bg-italia-900/30"
+                              : "text-gray-600 dark:text-gray-300 hover:text-italia-600 hover:bg-gray-50 dark:hover:bg-trueGray-800"
+                          }`}
+                        >
                           {item.name}
-                        </span>
-                        {item.children?.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className={`block w-full px-5 py-2 text-sm rounded-md transition-colors duration-150 ${
-                              isActive(child.href)
-                                ? "text-italia-700 dark:text-italia-400 bg-italia-50 dark:bg-italia-900/30"
-                                : "text-gray-600 dark:text-gray-300 hover:text-italia-600 hover:bg-gray-50 dark:hover:bg-trueGray-800"
-                            }`}
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    ) : (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className={`block w-full px-3 py-2 text-sm rounded-md transition-colors duration-150 ${
-                          isActive(item.href)
-                            ? "text-italia-700 dark:text-italia-400 bg-italia-50 dark:bg-italia-900/30"
-                            : "text-gray-600 dark:text-gray-300 hover:text-italia-600 hover:bg-gray-50 dark:hover:bg-trueGray-800"
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
-                    )
-                  )}
-                </div>
-              </Disclosure.Panel>
+                        </Link>
+                      )
+                    )}
+                  </div>
+                </Disclosure.Panel>
+              </Transition>
             </>
           )}
         </Disclosure>
@@ -205,7 +241,7 @@ export const Navbar = () => {
                     <Menu.Button
                       className={`inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md transition-colors duration-200 ${
                         isActive(item.href || "/services")
-                          ? "text-italia-700 dark:text-italia-400 bg-italia-50 dark:bg-italia-900/30"
+                          ? "text-italia-700 dark:text-italia-400 bg-italia-500/10 dark:bg-italia-900/30"
                           : "text-gray-700 dark:text-gray-200 hover:text-italia-600 dark:hover:text-italia-400 hover:bg-gray-50 dark:hover:bg-trueGray-800"
                       }`}
                     >
@@ -222,24 +258,34 @@ export const Navbar = () => {
                         />
                       </svg>
                     </Menu.Button>
-                    <Menu.Items className="absolute left-0 mt-1.5 w-48 bg-white dark:bg-trueGray-800 rounded-xl shadow-card-hover border border-gray-100 dark:border-trueGray-700 focus:outline-none z-50 py-1 origin-top-left transition duration-100 ease-out data-[closed]:scale-95 data-[closed]:opacity-0">
-                      {item.children?.map((child) => (
-                        <Menu.Item key={child.href}>
-                          {({ active }) => (
-                            <Link
-                              href={child.href}
-                              className={`block px-4 py-2 text-sm transition-colors duration-150 ${
-                                active || isActive(child.href)
-                                  ? "bg-italia-50 dark:bg-italia-900/30 text-italia-700 dark:text-italia-400"
-                                  : "text-gray-700 dark:text-gray-200"
-                              }`}
-                            >
-                              {child.name}
-                            </Link>
-                          )}
-                        </Menu.Item>
-                      ))}
-                    </Menu.Items>
+                    <Transition
+                      as={Fragment}
+                      enter="transition duration-200 ease-[var(--ease-spring)]"
+                      enterFrom="opacity-0 scale-95 -translate-y-2"
+                      enterTo="opacity-100 scale-100 translate-y-0"
+                      leave="transition duration-100 ease-in"
+                      leaveFrom="opacity-100 scale-100 translate-y-0"
+                      leaveTo="opacity-0 scale-95 -translate-y-1"
+                    >
+                      <Menu.Items className="absolute left-0 mt-1.5 w-48 bg-white dark:bg-trueGray-800 rounded-xl shadow-card-hover border border-gray-100 dark:border-trueGray-700 focus:outline-none z-50 py-1 origin-top-left">
+                        {item.children?.map((child, idx) => (
+                          <Menu.Item key={child.href}>
+                            {({ active }) => (
+                              <Link
+                                href={child.href}
+                                className={`block px-4 py-2 text-sm transition-all duration-150 border-l-2 ${
+                                  active || isActive(child.href)
+                                    ? "bg-italia-50 dark:bg-italia-900/30 text-italia-700 dark:text-italia-400 border-italia-500"
+                                    : "text-gray-700 dark:text-gray-200 border-transparent hover:border-italia-500/50"
+                                } animation-delay-${(idx + 1) * 100} animate-fade-in`}
+                              >
+                                {child.name}
+                              </Link>
+                            )}
+                          </Menu.Item>
+                        ))}
+                      </Menu.Items>
+                    </Transition>
                   </Menu>
                 </li>
               ) : (

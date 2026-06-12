@@ -275,12 +275,12 @@ export function PopupWidget() {
                         <span>
                           Powered by{" "}
                           <a
-                            href="https://Web3Forms.com"
+                            href="https://auxiodev.com"
                             className="text-gray-600"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            AzCore
+                            AuxioDev
                           </a>
                         </span>
                       </p>

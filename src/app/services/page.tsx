@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
+import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { useLanguage } from "@/context/LanguageContext";
 import servicesImg from "../../../public/img/pages/services.jpg";
 import courseImg from "../../../public/img/pages/course.jpg";
@@ -17,66 +18,74 @@ export default function ServicesPage() {
 
       <Container className="pb-16">
         <div className="grid gap-5 mt-4 md:grid-cols-2">
-          <div className="overflow-hidden rounded-2xl border border-gray-100 dark:border-trueGray-700">
-            <Image
-              src={servicesImg}
-              alt="Italian language courses"
-              className="w-full h-56 object-contain bg-gray-100 dark:bg-trueGray-800"
-            />
-          </div>
-          <div className="overflow-hidden rounded-2xl border border-gray-100 dark:border-trueGray-700">
-            <Image
-              src={courseImg}
-              alt="Italian cafe and cultural activities"
-              className="w-full h-56 object-contain bg-gray-100 dark:bg-trueGray-800"
-            />
-          </div>
+          <RevealOnScroll delay={1} direction="left">
+            <div className="overflow-hidden rounded-2xl border border-gray-100 dark:border-trueGray-700 group">
+              <Image
+                src={servicesImg}
+                alt="Italian language courses"
+                className="w-full h-56 object-contain bg-gray-100 dark:bg-trueGray-800 transition-transform duration-500 ease-[var(--ease-smooth)] group-hover:scale-[1.03]"
+              />
+            </div>
+          </RevealOnScroll>
+          <RevealOnScroll delay={2} direction="right">
+            <div className="overflow-hidden rounded-2xl border border-gray-100 dark:border-trueGray-700 group">
+              <Image
+                src={courseImg}
+                alt="Italian cafe and cultural activities"
+                className="w-full h-56 object-contain bg-gray-100 dark:bg-trueGray-800 transition-transform duration-500 ease-[var(--ease-smooth)] group-hover:scale-[1.03]"
+              />
+            </div>
+          </RevealOnScroll>
         </div>
         <div className="grid gap-5 mt-8 md:grid-cols-2">
-          <Link
-            href="/services/cafe"
-            className="group block p-8 transition-all duration-300 rounded-2xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700 hover:border-italia-200 dark:hover:border-italia-800 hover:shadow-card-hover"
-          >
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
-              {t.services.cafe}
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-              {t.services.cafeDesc}
-            </p>
-            <span className="inline-flex items-center mt-5 gap-1 text-sm font-semibold text-italia-600 dark:text-italia-400 group-hover:gap-2 transition-all duration-200">
-              {t.services.visitCafe}
-              <svg
-                className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </span>
-          </Link>
-          <Link
-            href="/services/course"
-            className="group block p-8 transition-all duration-300 rounded-2xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700 hover:border-italia-200 dark:hover:border-italia-800 hover:shadow-card-hover"
-          >
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
-              {t.services.courses}
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-              {t.services.coursesDesc}
-            </p>
-            <span className="inline-flex items-center mt-5 gap-1 text-sm font-semibold text-italia-600 dark:text-italia-400 group-hover:gap-2 transition-all duration-200">
-              {t.services.viewCourses}
-              <svg
-                className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </span>
-          </Link>
+          <RevealOnScroll delay={1}>
+            <Link
+              href="/services/cafe"
+              className="group block p-8 transition-all duration-300 rounded-2xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700 hover:border-italia-200 dark:hover:border-italia-800 hover:shadow-card-hover hover:-translate-y-1"
+            >
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
+                {t.services.cafe}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                {t.services.cafeDesc}
+              </p>
+              <span className="inline-flex items-center mt-5 gap-1 text-sm font-semibold text-italia-600 dark:text-italia-400 group-hover:gap-2 transition-all duration-200">
+                {t.services.visitCafe}
+                <svg
+                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
+          </RevealOnScroll>
+          <RevealOnScroll delay={2}>
+            <Link
+              href="/services/course"
+              className="group block p-8 transition-all duration-300 rounded-2xl bg-gray-50 dark:bg-trueGray-800 hover:bg-italia-50 dark:hover:bg-italia-900/20 border border-gray-100 dark:border-trueGray-700 hover:border-italia-200 dark:hover:border-italia-800 hover:shadow-card-hover hover:-translate-y-1"
+            >
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
+                {t.services.courses}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                {t.services.coursesDesc}
+              </p>
+              <span className="inline-flex items-center mt-5 gap-1 text-sm font-semibold text-italia-600 dark:text-italia-400 group-hover:gap-2 transition-all duration-200">
+                {t.services.viewCourses}
+                <svg
+                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
+          </RevealOnScroll>
         </div>
       </Container>
     </>
